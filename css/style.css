@@ -20,28 +20,18 @@
   }
 
 body{
-    height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    /* margin: auto; */
-    color: black;
-    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
-    place-items: center;
-    /* align-items: middle; */
+    grid-template-rows: 100px 1fr 50px;
+    margin: auto;
 }
 
 main img{
 width: 70%;
 }
 main{
-/* display: flex; */
+display: flex;
 grid-template-columns: 1fr 1fr;
 
-}
-
-main div {
-    display: flex;
-    justify-content: space-around;
 }
 
 #div1{

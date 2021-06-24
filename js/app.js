@@ -1,16 +1,16 @@
 'use strict';
 // Wrap every letter in a span
+let randomQuote = document.getElementById('randomquotes');
 
 function h1Animation () {
 var textWrapper = document.querySelector('.ml6 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
 anime.timeline({loop: false})
   .add({
     targets: '.ml6 .letter',
     translateY: ["1.1em", 0],
     translateZ: 0,
-    duration: 1550,
+    duration: 750,
     delay: (el, i) => 50 * i
   }).add({
     targets: '.ml6',
@@ -20,7 +20,6 @@ anime.timeline({loop: false})
     delay: 1000
   });
 }
-
 const quotes = ['So many books, so little time.'
 ,'There is no friend as loyal as a book.'
 ,'There is no friend as loyal as a book.'
@@ -36,8 +35,18 @@ const quotes = ['So many books, so little time.'
 ,'That’s the thing about books. They let you travel without moving your feet.'
 ,'A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.'];
 
+
+function randomQuotes () {
+    let random = getRandomQuotes(1,quotes.length-1);
+    randomQuote.innerHTML = quotes[random];
+}
+
+
+
 function getRandomQuotes(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);}
 
 
+    
+randomQuotes();
 h1Animation();
