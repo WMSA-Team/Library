@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    grid-template-rows: auto 1fr auto;
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+
+
+header {
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: space-between;
+    /* background-image: url(https://us.123rf.com/450wm/klavapuk/klavapuk1111/klavapuk111100009/11518381-seamless-background-with-books.jpg?ver=6); */
+}
+
+.form {
+    font-size: large;
+    color: rgb(0, 12, 44);
+    padding: 5px ;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+
+.form [type=text] {
+    background-color: #FFF5DA; color: black;
+    
+    color: rgb(78, 0, 0);
+}
+
+.legend {
+    color: rgb(151, 248, 255);
+    border: cyan;
+    background-color: rgb(160, 248, 175);
+   
+}
+
+button {
+    background-color:#FFF5DA; color: black;
+    border: none;
+    color: #010046;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+  }
+  
+  button {
+    transition-duration: 0.4s;
+  }
+  
+  button:hover {
+    background-color: #6cf560; /* Green */
+    color: #FFF5DA;
+  }
+
+.below {
+    margin-top: 60px;
+}
+
+  footer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 40px; */
+}
+.imgfooter {
+    position: relative;
+    bottom: 30px;
+}
+
+.right {
+    position: relative;
+    bottom: 30px;
+}
