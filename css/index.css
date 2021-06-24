@@ -1,0 +1,47 @@
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+
+  span {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* margin: auto; */
+    color: black;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    place-items: center;
+    /* align-items: middle; */
+}
+
+
+main div {
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+  width: 70%;
+}
