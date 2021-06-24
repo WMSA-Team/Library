@@ -1,0 +1,25 @@
+body{
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    margin: auto;
+}
+
+main img{
+width: 70%;
+}
+main{
+display: flex;
+grid-template-columns: 1fr 1fr;
+
+}
+
+#div1{
+    display: block;  
+    margin: 50px; 
+}
+
+#div2{
+    padding-top: 100px;
+    display: block;
+    margin: 50px;
+}
