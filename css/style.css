@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -83,3 +84,61 @@ button {
     position: relative;
     bottom: 30px;
 }
+=======
+
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+  }
+  
+  .ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+body{
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    margin: auto;
+}
+
+main img{
+    width: 60%;
+    border-radius: 10px;
+}
+main{
+display: flex;
+justify-content: space-around;
+}
+
+#div1{
+    display: block;  
+    margin-left: 60px;
+    
+}
+
+#div2{
+
+    
+    display: flex;
+    width: 20%;
+    align-items: center;
+    margin-right: 60px;
+    line-height: 2.5;
+}
+
+    padding-top: 100px;
+    display: block;
+    margin: 50px;
+}
+
