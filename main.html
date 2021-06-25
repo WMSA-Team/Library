@@ -4,71 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 <body>
     <header>
-        <div class="logo"><a href=""> <img style="width: 190px;" src="./img/logo.png" alt=""> </a></div>
-
-        <div>
+        <div class="logo">
+            <a href=""> 
+                <img style="width: 190px;" src="./img/logo.png" alt=""> 
+            </a>
+        </div>
         <fieldset>
-            <!-- <legend class="legend">Register</legend> -->
-        <form class="form">
-            <label for="fname">User Name:</label><br>
-            <input type="text" id="User" name="User" value=""><br>
-            <label for="lname">Password:</label><br>
-            <input type="text" id="Password" name="Password" value=""><br><br>
-            <button type="submit" value="submit" >join</button>
-            <!-- <input type="submit" value="Submit"> -->
+        <form id="logInForm">
+        <section>
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" placeholder="example">
+        </section>
+        <section>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </section>
+        <section>
+            <button type="submit">Log In</button>
+            <a href='#'><button>Register</button></a>
+        </section>
           </form>
         </fieldset>
-        </div>
     </header>
     <hr>
     <main>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quis consequatur sequi minus officiis neque alias, doloribus reiciendis veniam vel consectetur nihil eligendi voluptatem ut. Consequuntur reiciendis necessitatibus facere eveniet.
+        <section id="heroSection">
+            <img src="https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg" alt="">
+        </section>
+         <section id="cataogry">
+             <form>
+                <label for="check1">
+                 <input type="checkbox" id="check1" name="check1">Historical Books
+                </label>
+                <label for="check2">
+                 <input type="checkbox" id="check2" name="check2">Scientific Books
+                </label>
+                <label for="check3">
+                 <input type="checkbox" id="check3" name="check3">Novels Books
+                </label>
+                <label for="check4">
+                 <input type="checkbox" id="check4" name="check4">Poem Books
+                </label>
+             </form>
+         </section>
     </main>
-    <hr class="below">
+    <hr>
     <footer>
-    
-      <div class="imgfooter"><img src="./img/footer.png" style="width: 50px;" alt=""></div>  
-
+      <div class="imgfooter">
+          <img src="./img/footer.png" style="width: 50px;" alt="">
+        </div>
       <p class="right">All Right Reserved &copy; WMAS</p>
     </footer>
-    
-</head>
-<body>
-    <header></header> 
-    <main>
-       <section id="div1">
-           <img src="https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg" alt="">
-       </section>
-
-        <section id="div2">
-            <form class="checkBox">
-
-                <input type="checkbox" id="check1" name="check1">
-                <label for="check1">Historical Books</label>
-                <br>
-                <input type="checkbox" id="check2" name="check2">
-                <label for="check2">Scientific Books</label>
-                <br>
-                <input type="checkbox" id="check3" name="check3">
-                <label for="check3">Novels Books</label>
-                <br>
-                <input type="checkbox" id="check4" name="check4">
-                <label for="check4">Poem Books</label>
-
-            </form>
-        </section>
-
-
-   </main>
-   <footer></footer>
-
-    <script src="./js/app.js"></script>
 </body>
 </html>
