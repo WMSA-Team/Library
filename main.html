@@ -16,11 +16,32 @@
 </head>
 <body>
     <header>
+      
         <div class="logo">
-            <a href="./main.html"> 
-                <img src="./img/logo.png" alt="Logo"> 
-            </a>
+          <a href="./main.html"> 
+            <img src="./img/logo.png" alt="Logo"> 
+          </a>
+          <button class="openFormButton" onclick="openFormButton(event)">Donate a Book</button>
         </div>
+
+        <div class="popupForm" id="myForm" >
+          
+            
+            <form class="form-container">
+              <label for="bookName">Book Name</label>
+              <input type="text" id="bookName" name="bookName">
+              <br>
+              <label for="bookDescription">Book Description</label>
+              <input type="text" id="bookDescription" name="bookDescription">
+              <br>
+              <label for="author"> Book Author</label>
+              <input type="text" id="author" name="author">
+              <br>
+              <button type="submit" class="submitButton">Donate</button>
+              <button class="cancelButton" onclick="closeButton(event)">close</button>
+            </form>
+        </div>
+
         <fieldset>
         <form id="logInForm">
         <section>
