@@ -16,6 +16,44 @@
 </head>
 <body>
     <header>
+
+         <div class="logo">
+            <a href="./main.html"> 
+                <img src="./img/logo.png" alt="Logo"> 
+            </a>
+        </div>
+      
+        <form id="login-form" action="submit">
+          <fieldset>
+            <legend>
+              User Details
+            </legend>
+            <div>
+              <label for="username">Username</label>
+              <input id="username" type="text" name="username" placeholder="Eg. jane_doe" required/>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input id="password" type="password" name="password" required />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>
+              Login Type
+            </legend>
+            <span>
+              <input id="register" type="radio" name="login_type" value="register" checked="checked">
+              <label for="register">Register</label>
+            </span>
+            <span>
+              <input id="login" type="radio" name="login_type" value="login">
+              <label for="login">Login</label>
+            </span>
+          </fieldset>
+          <input type="submit" value="Submit" />
+        
+          <output name="result"></output>
+        </form>
       
         <div class="logo">
           <a href="./main.html"> 
@@ -58,6 +96,7 @@
         </section>
           </form>
         </fieldset>
+
     </header>
     <hr>
     <main>
