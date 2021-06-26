@@ -1,16 +1,18 @@
 
 body {
-    /* height: 100vh; */
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 25px;
     width: 99%;
-   
     background-image: url(https://barbarashdwallpapers.com/wp-content/uploads/2011/01/Orange-abstract-wallpaper-1.jpg) ;
     border: 1px solid #755d3e;
     text-shadow: 0 1px 0 #D0A97A;
     font-size: 18px;
     overflow: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -28,7 +30,6 @@ header fieldset form {
     align-items: flex-end;
     flex-direction: column;
     flex-wrap: wrap;
-    
 }
 .user{
   border: 2px solid maroon;
@@ -44,12 +45,10 @@ header fieldset form {
 .name{
   font-family: 'Viaoda Libre', cursive;
   color:black;
-  
 }
 .word{
   font-family: 'Viaoda Libre', cursive;
   color:black;
-  
 }
 
 button {
@@ -67,12 +66,10 @@ button {
     border-radius: 20px;
     font-family: 'Viaoda Libre', cursive;
     color: maroon;
-    
   }
   button:hover {
     background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/old-books-arranged-on-shelf-royalty-free-image-1572384534.jpg);
     color: #FFF5DA;
-    
   }
 
 hr {
@@ -97,8 +94,6 @@ footer {
 }
 .imgfooter{
   padding: 5px;
-  
-
 }
 .right{
   color:maroon;
@@ -109,12 +104,10 @@ footer {
 main div {
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* font-size: 13px; */
 }
 
 ul {
     list-style: none;
-    /* padding: 20px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -166,7 +159,7 @@ ul li input[type="checkbox"]:checked + label::before {
 
 ul li input[type="checkbox"]:checked + label {
     border: 3px solid maroon;
-    background-color:gold;
+    background-color:red;
     color:black;
     transition: all .4s;
 }
@@ -185,17 +178,11 @@ ul li input[type="checkbox"]:focus + label {
 
 
 .card-container {
-    /* cursor: pointer; */
-    /* height: 100vh; */
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* flex: 0 1 calc(20% - 250px) */
     overflow: auto;
-    
-    
-
   }
   .card {
     height: 350px;
@@ -218,7 +205,6 @@ ul li input[type="checkbox"]:focus + label {
   .card .back {
     background:khaki;
     color:black;
-    /* line-height: 150px; */
     text-align: center;
     transform: rotateY(180deg);
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -239,7 +225,6 @@ ul li input[type="checkbox"]:focus + label {
 
   div.side.back section p {
       overflow: auto;
-      /* width: 80%; */
       height: 230px;
   }
 
@@ -270,7 +255,7 @@ section.button {
   line-height: 2.5;
 }
 
-.popupForm{ 
+.popupForm{
    position: fixed;
    top: 15%;
    left: 50%;
@@ -283,7 +268,6 @@ section.button {
    max-width: 60%;
    display: none;
 
- 
  }
  .submitButton{
    background-color: blue;
@@ -302,32 +286,18 @@ section.button {
    margin-bottom: 5px;
    margin-left: 5px;
    outline: none;
-   
  }
 
-
-/* 
-.rating {
-  width: 180px;
-}
-
-.rating__star {
-  cursor: pointer;
-  color: #dabd18b2;
-} */
-
 .rate {
-  /* float: left; */
   height: 46px;
   padding: 0 10px;
 }
 .rate:not(:checked) > input {
   position:absolute;
-  top:-9999px;
+  visibility: hidden;
 }
 .rate:not(:checked) > label {
   float:right;
-  
   text-align: left;
   width:1em;
   overflow:hidden;
@@ -340,7 +310,7 @@ section.button {
   content: '★ ';
 }
 .rate > input:checked ~ label {
-  color: #ffc700;    
+  color: #ffc700;
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
@@ -352,4 +322,10 @@ section.button {
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
+}
+
+.action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
