@@ -216,3 +216,51 @@ section.button {
     display: flex;
     justify-content: space-around;
 }
+.form-container{
+  max-width: 350px;
+  padding: 15px;
+  background-color: white;
+  line-height: 2.5;
+}
+
+.form-container{
+  max-width: 350px;
+  padding: 15px;
+  background-color: white;
+  line-height: 2.5;
+}
+
+.popupForm{ 
+   position: fixed;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 1px solid black;
+   border-radius: 10px;
+   z-index: 10;
+   background-color: rgb(170, 155, 155);
+   width: 350px;
+   max-width: 60%;
+   display: none;
+
+ 
+ }
+ .submitButton{
+   background-color: blue;
+   color: white;
+   padding: 5px 25px;
+   cursor: pointer;
+   margin-bottom: 5px;
+   margin-left: 5px;
+   outline: none;
+ }
+ .cancelButton{
+   background-color: blue;
+   color: white;
+   padding: 5px 25px;
+   cursor: pointer;
+   margin-bottom: 5px;
+   margin-left: 5px;
+   outline: none;
+   
+ }
