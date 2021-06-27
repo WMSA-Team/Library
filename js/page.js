@@ -291,7 +291,7 @@ function pickaBook (e) {
   if (e.target.innerText === 'More Info') {
     let index = Book.arr.map(function(x) {return x.name; }).indexOf(e.target.id);
     localStorage.setItem('pickedBook', JSON.stringify(Book.arr[index]))
-    window.location.href = '../book.html'
+    window.location.href = '../Library/book.html'
     console.log(e.target)
    }
 }
@@ -309,7 +309,7 @@ function chooseCat(e) {
       }
     }
     localStorage.setItem('pickedCat', JSON.stringify(thisType))
-    window.location.href = '../books.html'
+    window.location.href = '../Library/books.html'
   }
 }
 localStorage.setItem('Book.arr', JSON.stringify(Book.arr));
