@@ -1,0 +1,164 @@
+body {
+    height: 100%;
+    /* overflow: auto; */
+    display: grid;
+    /* grid-template-rows: auto 1fr ; */
+    gap: 30px;
+}
+
+header {
+    background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+#logo a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-family: 'Bad Script', cursive;
+}
+
+header img {
+    width: 70px;
+}
+
+header nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+#navbar {
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: sticky;
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+
+.poster-photo{
+    width: 400px;
+    height: 600px;
+    
+}
+.left-div{
+   
+    /* margin-left: 300px; */
+}
+
+.right-div{
+    
+    margin-left: 10px;
+    margin-top: 20px;
+
+}
+
+.bookInfo{
+    display: flex;
+    margin-top: 100px;
+
+}
+
+h1{
+    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+    margin-bottom: 5px;
+}
+.book-input{
+    display: block;
+    line-height: 5;
+    margin-left: 10px;
+    font-size: 20px;
+    color: gray;
+
+
+}
+.book-output{
+    display: block;
+    line-height: 5;
+    margin-left: 60px;
+    font-size: 20px;
+
+}
+
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+  .card {
+    height: 350px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 250px;
+    margin: 15px;
+  }
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  .card .side {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+  }
+  .card .back {
+    background:khaki;
+    color:black;
+    text-align: center;
+    transform: rotateY(180deg);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 2px;
+    font-size: large;
+  }
+
+  
+
+  div.side.back {
+      display: grid;
+      gap:5px
+  }
+
+  div.side.back section h1 {
+      font-weight: bold;
+  }
+
+  div.side.back section p {
+      overflow: auto;
+      height: 230px;
+  }
+
+div.side img {
+    height: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+section.button {
+    display: flex;
+    justify-content: space-around;
+}
+

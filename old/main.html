@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <a href="./main.html">
+            <img src="./img/logo.png" alt="Logo">
+          </a>
+          <button class="openFormButton" onclick="openFormButton(event)">Donate a Book</button>
+        </div>
+        <div class="popupForm" id="myForm" >
+            <form class="form-container">
+              <label for="bookName">Book Name</label>
+              <input type="text" id="bookName" name="bookName">
+              <br>
+              <label for="bookDescription">Book Description</label>
+              <input type="text" id="bookDescription" name="bookDescription">
+              <br>
+              <label for="author"> Book Author</label>
+              <input type="text" id="author" name="author">
+              <br>
+              <button type="submit" class="submitButton">Donate</button>
+              <button class="cancelButton" onclick="closeButton(event)">close</button>
+            </form>
+        </div>
+        <form id="login-form" action="submit">
+          <fieldset>
+            <div>
+              <label for="username">Username</label>
+              <input class="user" id="username" type="text" name="username" placeholder="Eg. jane_doe" required/>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input class="pass" id="password" type="password" name="password" required />
+            </div>
+          </fieldset>
+          <button type="button" onclick="login()" value="Submit">Login</button>
+        </form>
+    </header>
+    <hr>
+    <main>
+        <div class="container">
+            <ul class="ks-cboxtags">
+              <li><input type="checkbox" id="historical" value="historical"><label for="historical">Historical</label></li>
+              <li><input type="checkbox" id="scientific" value="scientific"><label for="scientific">Scientific</label></li>
+              <li><input type="checkbox" id="novels" value="novels"><label for="novels">Novels</label></li>
+              <li><input type="checkbox" id="poem" value="poem"><label for="poem">Poem</label></li>
+            </ul>
+          </div>
+                <section class="card-container" id="cardContainer">
+                  </section>
+    </main>
+    <hr>
+    <footer>
+      <div class="imgfooter">
+          <img src="./img/footer.png" alt="">
+        </div>
+      <p class="right">All Right Reserved &copy; WMAS</p>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    height: 100%;
+    /* overflow: auto; */
+    display: grid;
+    /* grid-template-rows: auto 1fr ; */
+    gap: 30px;
+}
+
+header {
+    background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+#logo a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-family: 'Bad Script', cursive;
+}
+
+header img {
+    width: 70px;
+}
+
+header nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+#navbar {
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: sticky;
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+main section{
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 10px;
+   
+}
+
+.poster-photo{
+    width: 400px;
+    height: 600px;
+    
+}
+.left-div{
+   
+    /* margin-left: 300px; */
+}
+
+.right-div{
+    
+    margin-left: 10px;
+    margin-top: 20px;
+
+}
+
+.bookInfo{
+    display: flex;
+    margin-top: 100px;
+
+}
+
+h1{
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
+}
+.book-input{
+    display: block;
+    line-height: 5;
+    margin-left: 10px;
+    font-size: 20px;
+    color: gray;
+
+
+}
+.book-output{
+    display: block;
+    line-height: 5;
+    margin-left: 60px;
+    font-size: 20px;
+
+}
+
+p{
+    width: 400px;
+    line-height: 1.5;
+    font-size: 17px;
+}

@@ -1,27 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css">
-    
+
+    <link rel="stylesheet" href="./css/page.css">
 </head>
-<header id="quotes">
-    <h1 >
-            Babel Library </h1>
-</header>
-    <div id="randomquotes">
-        <a> Random Book</a>
-        <a> Browse Library</a>
-    </div>
+
 
 <body>
+    <header>
+        <section id="navbar">
+           
+            <section id="logo">
+                <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+                <span>
+                    <a href="./index.html">
+                    <p>WMSA</p>
+                    <p>Library</p>
+                    </a>
+                </span>
+            </section>
+            <section>
+                <nav>
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact Us</a>
+                </nav>
+            </section>
+        </section>
+        <section id="qoutes">
+            <div class="container py-5">
+                <div class="output" id="output">
+                  <h1 class="cursor"></h1>
+                  <p></p>
+                </div>
+              </div>
+        </section>
+    </header>
+    <main>
+        <section id="events">
+            <h1>
+                Upcoming Events
+            </h1>
+            <nav>
+                <h4 id=first> 1980 LTUC Founded</h4>
+                <h4 id=sec>23/May/2021 Start of The coures</h4>
+                <h4 id=third>27/June/2021 Created This Wire-Frame</h4>
+            </nav>
+            <section id="event">
+                <span>
+                    <h1 id="aj">
+                        1980 LTUC Founded.
+                    </h1>
+                    <p id="pra">
+                        Luminus Technical University College (LTUC) was established in 1980 under the name of Al Quds College and is part of Luminus Education Group. LTUC aims to offer unique programs based on identified market needs and employment requirements.
+                    </p>
+                </span>
+                <span>
+                    <img id = "img" src="https://tomad.com/wp-content/uploads/2019/10/20191009_090946-1080x675.jpg" alt="" srcset="">
+                </span>
 
+            </section>
+        </section>
+        <section id="randomBooks">
+            <span>
+                <h1>
+                    Our Special
+                </h1>
+            </span>
+            <span id="fourBooks">
+            </span>
+        </section>
+        <section id="catagory">
+            <span>
+                <h1>
+                    Catagory
+                </h1>
+            </span>
+            <span id="fourCat">
+                <div>
+                    <div>
+                        <div class="cat" >
+                            <img src="./img/HISTORYIMG/History.jpg" alt="History Category" id="history">
+                           
+                        </div>
+                        <p>History</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="cat" >
+                            <img src="./img/SCIENCEIMG/science.jpg" alt="Science Category" id="science">
+                        </div>
+                        <p>Science</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="cat" ><img
+                                src="./img/NOVELSIMG/Novel.jpg" alt="Novel" id="novel">
+                        </div>
+                        <p>Novel</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="cat" ><img
+                                src="./img/poem.jpg" alt="poem" id="poems">
+                        </div>
+                        <p>Poem</p>
+                    </div>
+                </div>
+            </span>
+        </section>
+    </main>
+    <footer>
+        <section>
+        </section>
+        <section>
+            <div id="footer" style="display: flex; gap:10px">
+                <img src="./img/logo.png" alt="Logo">
+                <span>
+                    <p>WMSA</p>
+                    <p>Library</p>
+                </span>
+            </div>
+            <br>
+            <p>This Website Was created with all Love And Hard Work</p>
+            <br>
+            <p>All Right Reserved To WMSA-Team &copy; 2021</p>
+        </section>
+    </footer>
+   
 
-
-<script src="./js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/page.js"></script>
 </body>
+
 </html>

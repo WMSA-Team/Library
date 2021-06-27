@@ -1,0 +1,103 @@
+header{
+    background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: gray; */
+  
+}
+
+header img {
+    width: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-family: 'Bad Script', cursive;
+}
+
+
+.img{
+    padding: 5px;
+    float:right;
+    width: 750px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.w{
+  justify-content:flex-end;
+  color: beige;
+
+}
+.lib{
+    color: blanchedalmond;
+    text-align: left; padding: 20px;
+font-family: 'Pacifico', cursive;
+}
+
+
+
+
+.about{
+    text-align: left;
+    font-size: xx-large;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 30px;
+    margin-top: 15px;
+color: darkgoldenrod;
+}
+
+
+
+  .o{
+      text-align:left;
+      color:black;
+      font-size: large;
+      padding: 40px;
+      font-family: 'Yellowtail', cursive;   
+  }
+  .library{
+      text-align:left;
+      color:darkgoldenrod;
+      padding: 10px;
+      font-size:large;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: bold;
+     text-indent: 30px;
+    
+  }
+footer{
+    background-image: url(https://www.adobe.com/express/create/cover/media_1e49b5b48bff6cd490d41d7bee28f57cbead6d5b0.png?width=2000&format=webply&optimize=medium);
+    margin-top:  350px;
+   
+  
+}
+
+ .footer{
+    font-family: 'Kirang Haerang', cursive;
+     text-align: center;
+   
+     color: darkgray;
+ }
+ .logofooter{
+     width: 50px;
+     height: 50px;
+ }
