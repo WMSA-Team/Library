@@ -163,3 +163,43 @@ render(Book.arr);
 
 
 
+  // mohammad code
+  let events = document.getElementById('events')
+
+
+  function eventHandler(e) {
+    if(e.target.id === 'first' || e.target.id === 'sec'|| e.target.id === 'third'){
+      if (e.target.id === 'first') {
+        
+        let heading = document.getElementById('aj')
+        heading.innerText= `1980 LTUC Founded.`;
+        let text = document.getElementById('pra')
+        text.innerText= `Luminus Technical University College (LTUC) was established in 1980 under the name of Al Quds College and is part of Luminus Education Group.
+         LTUC aims to offer unique programs based on identified market needs and employment requirements.`;
+        let img = document.getElementById('img')
+        img.src= `./img/aaaa.png`;
+      }
+  
+      else if (e.target.id === 'sec') {
+        
+        let heading1 = document.getElementById('aj')
+        heading1.innerText= `23/May/2021 Start of The couress  .`;
+        let text1 = document.getElementById('pra')
+        text1.innerText= `welcome sdasdasdsadasdadadaeqweqw mohammadsowardfk .`;
+        let img1 = document.getElementById('img')
+        img1.src= `./img/bg.jpeg`;
+       }
+  
+       else if (e.target.id === 'third'){
+        
+        let heading2 = document.getElementById('aj')
+        heading2.innerText= `27/June/2021 Created This Wire-Frame .`;
+        let text2 = document.getElementById('pra')
+        text2.innerText= `welcome sdasdasdsadasdadadaeqweqw ahmaadddddddddddddd .`;
+        let img2 = document.getElementById('img')
+        img2.src= `./img/book.png`;
+       }
+
+      }};
+
+    events.addEventListener('click', eventHandler);
