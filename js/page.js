@@ -1,25 +1,86 @@
 'use strict';
 // Wrap every letter in a span
-let randomQuote = document.getElementById('randomquotes');
+// let randomQuote = document.getElementById('randomquotes');
+var i = 0,
+    a = 0,
+    isBackspacing = false,
+    isParagraph = false;
+
+var speedForward = 90, //Typing Speed
+    speedWait = 5000, // Wait between typing and backspacing
+    speedBetweenLines = 1000, //Wait between first and second lines
+    speedBackspace = 100; //Backspace Speed
+
+//Run the loop
 
 
-function h1Animation () {
-  let textWrapper = document.querySelector('.ml6 .letters');
-  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, '<span class=\'letter\'>$&</span>');
-  anime.timeline({loop: false})
-    .add({
-      targets: '.ml6 .letter',
-      translateY: ['1.1em', 0],
-      translateZ: 0,
-      duration: 750,
-      delay: (el, i) => 50 * i
-    }).add({
-      targets: '.ml6',
-      // opacity: 0,
-      duration: 1000,
-      easing: 'easeOutExpo',
-      delay: 1000
-    });
+function typeWriter(id, ar) {
+  var element = $("#" + id),
+      aString = ar[a],
+      eHeader = element.children("h1"), //Header element
+      eParagraph = element.children("p"); //Subheader element
+  
+  // Determine if animation should be typing or backspacing
+  if (!isBackspacing) {
+    
+    // If full string hasn't yet been typed out, continue typing
+    if (i < aString.length) {
+      
+      // If character about to be typed is a pipe, switch to second line and continue.
+      if (aString.charAt(i) == "|") {
+        isParagraph = true;
+        eHeader.removeClass("cursor");
+        eParagraph.addClass("cursor");
+        i++;
+        setTimeout(function(){ typeWriter(id, ar); }, speedBetweenLines);
+        
+      // If character isn't a pipe, continue typing.
+      } else {
+        // Type header or subheader depending on whether pipe has been detected
+        if (!isParagraph) {
+          eHeader.text(eHeader.text() + aString.charAt(i));
+        } else {
+          eParagraph.text(eParagraph.text() + aString.charAt(i));
+        }
+        i++;
+        setTimeout(function(){ typeWriter(id, ar); }, speedForward);
+      }
+      
+    // If full string has been typed, switch to backspace mode.
+    } else if (i == aString.length) {
+      
+      isBackspacing = true;
+      setTimeout(function(){ typeWriter(id, ar); }, speedWait);
+      
+    }
+    
+  // If backspacing is enabled
+  } else {
+    
+    // If either the header or the paragraph still has text, continue backspacing
+    if (eHeader.text().length > 0 || eParagraph.text().length > 0) {
+      
+      // If paragraph still has text, continue erasing, otherwise switch to the header.
+      if (eParagraph.text().length > 0) {
+        eParagraph.text(eParagraph.text().substring(0, eParagraph.text().length - 1));
+      } else if (eHeader.text().length > 0) {
+        eParagraph.removeClass("cursor");
+        eHeader.addClass("cursor");
+        eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
+      }
+      setTimeout(function(){ typeWriter(id, ar); }, speedBackspace);
+    
+    // If neither head or paragraph still has text, switch to next quote in array and start typing.
+    } else { 
+      
+      isBackspacing = false;
+      i = 0;
+      isParagraph = false;
+      a = (a + 1) % ar.length; //Moves to next position in array, always looping back to 0
+      setTimeout(function(){ typeWriter(id, ar); }, 50);
+      
+    }
+  }
 }
 
 const quotes = ['So many books, so little time.'
@@ -37,20 +98,68 @@ const quotes = ['So many books, so little time.'
   ,'That’s the thing about books. They let you travel without moving your feet.'
   ,'A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.'];
 
+  typeWriter("output", quotes);
 
-function randomQuotes () {
-  let random = getRandomQuotes(1,quotes.length-1);
-  randomQuote.innerHTML = quotes[random];
-}
+  let cardContainer = document.getElementById('fourBooks')
 
-function getRandomQuotes(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);}
-
-
-  function randomQ () {
-randomQuotes();
-h1Animation();
+  // let cardContainer = document.getElementById('cardContainer');
+  function render (ar) {
+    cardContainer.innerHTML = ''
+    for (let i=0; i<4; i++){
+      let card = document.createElement('div');
+            card.className = 'card'
+            // create side div element
+            let side = document.createElement('div');
+            side.className = 'side'
+            // create img element
+            let imag = document.createElement('img');
+            imag.src = ar[i].imag;
+            let section1 = document.createElement('section');
+            let h1 = document.createElement('h1')
+            h1.innerText = ar[i].name;
+            let p = document.createElement('p')
+            p.innerText = ar[i].description;
+            let sideBack = document.createElement('div')
+            sideBack.className = 'side back'
+            let action = document.createElement('section')
+            action.className = 'action'
+            let buy = document.createElement('button')
+            buy.innerText = 'Buy'
+            // rating.setAttribute('id', 'mamoon')
+            side.appendChild(imag);
+            card.appendChild(side);
+            sideBack.appendChild(section1);
+            section1.appendChild(h1);
+            section1.appendChild(p);
+            card.appendChild(sideBack);
+            action.appendChild(buy);
+            // action.appendChild(rating);
+            sideBack.appendChild(action)
+            cardContainer.appendChild(card)
+            let star = document.createElement('div')
+            star.className = 'star'
+            let form = document.createElement('form')
+            form.action = ''
+    }
   }
 
-  randomQ()
+  function Book (name,description,imag) {
+    this.name = name;
+    this.description = description;
+    this.rating = 0;
+    this.imag = imag;
+    Book.arr.push(this);
+}
+Book.arr = []
+let Hyper = new Book('HYPER SPACE','aaaaa','https://www.adobe.com/express/discover/ideas/media_1e0050318770e4a770caf5515f8120a3ea48c7c07.png?width=2000&format=webply&optimize=medium')
+let WHAT = new Book ('WHAT IF', 'any', 'https://dboyle93.files.wordpress.com/2014/05/the-road-cover-basic4.png')
+let DARK = new Book ('DARK MATTER','walaa','../img/SCIENCEIMG/DARK MATTER AND THE DINOSTORS.jpg');
+let ABRIEF = new Book ('ABRIEF HISTORY OF TIME', 'shahed', '../img/SCIENCEIMG/ABRIEF HISTORY OF TIME.jpg')
+render(Book.arr);
+
+
+
+
+
+
 
