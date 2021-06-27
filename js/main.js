@@ -20,7 +20,7 @@ function Books(name,description,pagenumber,rateing,img){
 'THE LORD OF THE RINGS','HARRY POTTER','WORLD WHISPERER','DANIELLE STEEL','MEMORY',
 'MOON DANCE','THE PAST IS RISING','IT','THE YEAR OF THE WITCHING','WATER & FLAME',
 'THE SUMMER HOPE','WHITBY ROCK','THE ROAD','AMARA THE BRAVE','THE SWALLOWS','A DARKNESS OF DRAGONS',
-'THE BEASTS HEART','TWILIGHT'
+'THE BEASTS HEART','TWILIGHT',''
  ];
 
 Books.prototype.randomBook = function(){
@@ -30,7 +30,7 @@ Books.prototype.randomBook = function(){
         let random = Math.ceil(getRandombook(this.book,))
     }
 }
-=======
+
 
 function changeToVote(){
     
