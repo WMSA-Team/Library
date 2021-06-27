@@ -1,54 +1,7 @@
 
 'use strict'
 
-// window.addEventListener("DOMContentLoaded", setupForm);
-
-// let user;
-// function setupForm(){
-// 	const form = document.getElementById("login-form");
-// 	form.addEventListener("submit", handleSubmit);
-// }//setupForm
-
-// function handleSubmit(event){
-// 	event.preventDefault();
-// 	const {
-// 		username,
-// 		password,
-// 		login_type,
-// 		result
-// 	} = event.target;
-// 	const processUser = login_type.value == "register" ? registerUser : loginUser;
-// 	const response    = processUser(username.value, password.value);
-// 	result.innerHTML  = response;
-// }//handleSubmit
-
-// function registerUser(username, password){
-// 	window.localStorage.setItem("username", username);
-// 	window.localStorage.setItem("password", password);
-// 	return `New user ${username} now registered!`;
-// }//registerUser
-
-// function loginUser(username, password){
-// 	const registeredUser     = window.localStorage.getItem("username");
-// 	const registeredPassword = window.localStorage.getItem("password");
-// 	const validUser     = username == registeredUser;
-//     user=registeredUser
-// 	const validPassword = password == registeredPassword;
-
-// 	if(validUser && validPassword){
-//          document.getElementById("login-form").innerHTML='';
-//          appendText();
-
-// 	}
-//         else if(!validUser)     return `Username ${username} has not been registered. `;
-// 	else if(!validPassword) return `Incorrect password for username ${username}`;
-// }
-// function appendText() {
-//     let text = document.createElement('p');
-//     const form = document.getElementById("login-form")
-//     text.innerText= `welcome ${user} .`;
-//     form.appendChild(text);
-//   };
+let user;
 
 
 function openFormButton(event) {
@@ -60,13 +13,68 @@ function closeButton(event) {
     document.getElementById('myForm').style.display = 'none';
 }
 
-/// mamoun
-///this function and event handler to make the content change with each category of the check boxes
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
 let cardContainer = document.getElementById('cardContainer');
 let rating = document.getElementById('rating')
-// rating.removeAttribute('id')
-// console.log(rating);
+function render (ar) {
+    cardContainer.innerHTML = ''
+    let count = 100000000;
+            for (let i = 0; i<ar.length; i++){
+            let card = document.createElement('div');
+            card.className = 'card'
+            let side = document.createElement('div');
+            side.className = 'side'
+            let imag = document.createElement('img');
+            imag.src = ar[i].imag;
+            let section1 = document.createElement('section');
+            let h1 = document.createElement('h1')
+            h1.innerText = ar[i].name;
+            let p = document.createElement('p')
+            p.innerText = ar[i].description;
+            let sideBack = document.createElement('div')
+            sideBack.className = 'side back'
+            let action = document.createElement('section')
+            action.className = 'action'
+            let buy = document.createElement('button')
+            buy.innerText = 'Buy'
+            side.appendChild(imag);
+            card.appendChild(side);
+            sideBack.appendChild(section1);
+            section1.appendChild(h1);
+            section1.appendChild(p);
+            card.appendChild(sideBack);
+            action.appendChild(buy);
+            sideBack.appendChild(action)
+            cardContainer.appendChild(card)
+            let star = document.createElement('div')
+            star.className = 'star'
+            let form = document.createElement('form')
+            form.action = ''
+            for (let j=5; j> 0; j--) {
+                count--;
+                console.log(j,count);
+                let label = document.createElement('label');
+                let input = document.createElement('input');
+                input.type = 'radio'
+                input.id = `star${j+count}`
+                input.value = j+count
+                input.name = "rate"
+                input.className = `star star-${j}`
+                label.className = `star star-${j}`
+                form.appendChild(input)
+                label.setAttribute('for',`star${j+count}`) ;
+                form.appendChild(label);
+                if (ar[i].rating === j) {
+                    input.checked = true;
+                }
+            }
+            star.appendChild(form)
+            action.appendChild(star);
+            }
+ }
+
+checkboxes.forEach(checkbox => checkbox.addEventListener('change',change))
+
 function render(ar) {
     cardContainer.innerHTML = ''
     let count = 100000000;
@@ -140,14 +148,12 @@ function change(e) {
             bookCat.splice(index, 1);
         }
     }
-    // console.log(bookCat);
-    // render (bookCat);
 }
 
 
-//////End of mamoon Code
 
 function Book(name, description, imag, type) {
+
     this.name = name;
     this.description = description;
     this.rating = 0;
@@ -155,7 +161,7 @@ function Book(name, description, imag, type) {
     this.type = type;
     Book.arr.push(this);
 }
-Book.arr = []
+
 let Hyper = new Book('HYPER SPACE','is a book by Michio Kaku, a theoretical physicist from the City College of New York. It focuses on Kakus studies of higher dimensions referred to as hyperspace. The recurring theme of the book is that all four forces of the universe (the strong force, the weak force, electromagnetism and gravity) become more coherent and their description simpler in higher dimensions','../img/SCIENCEIMG/HYPER SPACE.jpg','science');
 let WHAT = new Book('WHAT IF', ' a compilation of well-researched, science-based answers to some of the craziest hypothetical questions you can imagine.', '../img/SCIENCEIMG/WHAT IF.jpg','science');
 let DARK = new Book('DARK MATTER  AND THE DINOSAURS', 'a 2015 non-fiction book by Harvard astrophysicist Lisa Randall. Randall conjectures that dark matter may have indirectly led to the extinction of dinosaurs. Other scientists generally regard this as a credible hypothesis but note a lack of supporting evidence.', '../img/SCIENCEIMG/DARK MATTER AND THE DINOSAURS.jpg','science');
