@@ -3,7 +3,7 @@
 
 // window.addEventListener("DOMContentLoaded", setupForm);
 
-let user;
+// let user;
 // function setupForm(){
 // 	const form = document.getElementById("login-form");
 // 	form.addEventListener("submit", handleSubmit);
@@ -70,10 +70,6 @@ let rating = document.getElementById('rating')
 function render(ar) {
     cardContainer.innerHTML = ''
     let count = 100000000;
-    // for (let i=0; i<ar.length; i++) {
-    //this line will check all the book we have checked and render them on the cardContainer section
-    // for (let j=0; j<Books.arr.cat.length; j++) {
-    //creat card div element
     for (let i = 0; i < ar.length; i++) {
         let card = document.createElement('div');
         card.className = 'card'
@@ -128,8 +124,6 @@ function render(ar) {
         star.appendChild(form)
         action.appendChild(star);
     }
-    // }
-    // }
 }
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('change', change))
@@ -248,6 +242,76 @@ render(Book.arr);
 
 
 
+/// mohammad silwadi
+
+let userName = [
+	{ // Object @ 0 index
+		username: "mohammad",
+		password: "123456"
+	},
+	{ // Object @ 1 index
+		username: "ahmad",
+		password: "123456"
+	},
+	{ // Object @ 2 index
+		username: "omar",
+		password: "123456"
+	}
+
+]
+let user;
+function login() {
+	let username = document.getElementById('username').value
+	let password = document.getElementById('password').value
+
+	for(let i = 0; i < userName.length; i++) {
+		
+		if(username == userName[i].username && password == userName[i].password) {
+			// console.log(username + " is logged in!!!");
+            user=username;
+            document.getElementById("login-form").innerHTML='';
+                 appendText();
+                 logout();
+                 localStorage.setItem("username", user)
+                localStorage.setItem("password", password);
+			return;
+
+		}
+	}
+	// console.log("incorrect username or password")
+    appendText2()
+}
+localStorage.getItem("password")
+localStorage.getItem("username")
+function appendText() {
+    let text = document.createElement('p');
+    
+    const form = document.getElementById("login-form")
+    
+    text.innerText= `welcome ${user} .`;
+    
+    form.appendChild(text);
+  };
+
+  function appendText2() {
+    let text = document.createElement('p');
+    const form = document.getElementById("login-form")
+    text.innerText= `incorrect password or user name `;
+    form.appendChild(text);
+  };
+function logout(){
+     let logout=document.createElement('button');
+    const form = document.getElementById("login-form");
+    logout.innerHTML="logout";
+    logout.type="button";
+    logout.name="logout";
+    logout.setAttribute("onClick","loginreturn()");
+    form.appendChild(logout);
+}
+function loginreturn(){
+
+  location.reload();
+}
 let bk = ['HYPER SPACE', 'WHAT IF', 'DARK MATTER AND THE DINOSTORS', 'ABRIEF HISTORY OF TIME', 'THE WRIGHT BROTHERS', 'MAKING CONTACT',
     'THE DEMON-HAUNTED WORLD', 'IN LINITE POWERS', 'PHILOSOPHY OF SCIENCE', 'A SHORT HISTORY', '100 THINGS CODING', 'A CRACK IN CREATION',
     'A STROPHYSICS', 'THE DREAMT LAND', 'THE MAD SCIENCE BOOK', 'THE BOOK OF WHY', 'THE SELFISH GENE', 'CARL SAGAN COSMOS', 'DATA SCIENCE',
@@ -265,3 +329,4 @@ let bk = ['HYPER SPACE', 'WHAT IF', 'DARK MATTER AND THE DINOSTORS', 'ABRIEF HIS
     'ON ENTERING THE SEA', 'WOMEN IN MY POETRY & MY LIFE', 'ARABIAN LOVE POEM', 'THE MUALLAQAT', 'ANTHOLOGY OF CLASSICAL ARABIC POETRY',
     'MAJNUN LEYLA', 'MILK & HONEY', 'HAIKU POEMS'
 ];
+
