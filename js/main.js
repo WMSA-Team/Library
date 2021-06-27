@@ -3,7 +3,7 @@
 
 // window.addEventListener("DOMContentLoaded", setupForm);
 
-let user;
+// let user;
 // function setupForm(){
 // 	const form = document.getElementById("login-form");
 // 	form.addEventListener("submit", handleSubmit);
@@ -111,7 +111,7 @@ function render (ar) {
             form.action = ''
             for (let j=5; j> 0; j--) {
                 count--;
-                console.log(j,count);
+                // console.log(j,count);
                 let label = document.createElement('label');
                 let input = document.createElement('input');
                 input.type = 'radio'
@@ -178,3 +178,73 @@ render(Book.arr);
  ];
 
 
+/// mohammad silwadi
+
+let userName = [
+	{ // Object @ 0 index
+		username: "mohammad",
+		password: "123456"
+	},
+	{ // Object @ 1 index
+		username: "ahmad",
+		password: "123456"
+	},
+	{ // Object @ 2 index
+		username: "omar",
+		password: "123456"
+	}
+
+]
+let user;
+function login() {
+	let username = document.getElementById('username').value
+	let password = document.getElementById('password').value
+
+	for(let i = 0; i < userName.length; i++) {
+		
+		if(username == userName[i].username && password == userName[i].password) {
+			// console.log(username + " is logged in!!!");
+            user=username;
+            document.getElementById("login-form").innerHTML='';
+                 appendText();
+                 logout();
+                 localStorage.setItem("username", user)
+                localStorage.setItem("password", password);
+			return;
+
+		}
+	}
+	// console.log("incorrect username or password")
+    appendText2()
+}
+localStorage.getItem("password")
+localStorage.getItem("username")
+function appendText() {
+    let text = document.createElement('p');
+    
+    const form = document.getElementById("login-form")
+    
+    text.innerText= `welcome ${user} .`;
+    
+    form.appendChild(text);
+  };
+
+  function appendText2() {
+    let text = document.createElement('p');
+    const form = document.getElementById("login-form")
+    text.innerText= `incorrect password or user name `;
+    form.appendChild(text);
+  };
+function logout(){
+     let logout=document.createElement('button');
+    const form = document.getElementById("login-form");
+    logout.innerHTML="logout";
+    logout.type="button";
+    logout.name="logout";
+    logout.setAttribute("onClick","loginreturn()");
+    form.appendChild(logout);
+}
+function loginreturn(){
+
+  location.reload();
+}
