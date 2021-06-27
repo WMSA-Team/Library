@@ -41,32 +41,20 @@ h1 {
     margin-bottom: 15px;
 }
 
-.ml6 {
-    position: relative;
-    font-weight: 900;
-    font-size: 3.3em;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .ml6 .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.2em;
-    padding-right: 0.05em;
-    padding-bottom: 0.1em;
-    overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .ml6 .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
-
+main div div p {
+  /* margin-left: 50px; */
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  /* color: white; */
+}
 
 #qoutes {
-    width: 750px;
-    margin-left: 70px;
+  display: flex;
+  /* width: 80%; */
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
 }
 
 button {
@@ -336,3 +324,60 @@ footer img {
     font-size: 25px;
     font-family: 'Bad Script', cursive;
   }
+
+.container.py-5 {
+  display: grid;
+  place-items: center;
+  /* width: 90%; */
+  text-align: center;
+}
+
+  
+  .output {
+    text-align:center;
+    font-family: 'Source Code Pro', monospace;
+    color:white;
+    
+  }
+
+  .output h1 {
+    font-size:30px;
+    text-transform: capitalize;
+  }
+  
+  /* Cursor Styling */
+  
+  .cursor::after {
+    content:'';
+    display:inline-block;
+    margin-left:3px;
+    background-color:white;
+    animation-name:blink;
+    animation-duration:0.5s;
+    animation-iteration-count: infinite;
+  }
+  h1.cursor::after {
+    height:24px;
+    width:13px;
+  }
+  p.cursor::after {
+    height:13px;
+    width:6px;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity:1;
+    }
+    49% {
+      opacity:1;
+    }
+    50% {
+      opacity:0;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+

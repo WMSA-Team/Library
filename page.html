@@ -31,15 +31,13 @@
                 </nav>
             </section>
         </section>
-        <section>
-            <div id="qoutes">
-                <h1 class="ml6">
-                    <span class="text-wrapper">
-                        <span class="letters" id="randomquotes"></span>
-                    </span>
-                </h1>
-                <button onclick="randomQ()">Random Qoutes</button>
-            </div>
+        <section id="qoutes">
+            <div class="container py-5">
+                <div class="output" id="output">
+                  <h1 class="cursor"></h1>
+                  <p></p>
+                </div>
+              </div>
         </section>
     </header>
     <main>
@@ -157,30 +155,35 @@
             <span id="fourCat">
                 <div>
                     <div>
-                        <div class="cat"><img
-                                src="https://www.adobe.com/express/discover/ideas/media_1e0050318770e4a770caf5515f8120a3ea48c7c07.png?width=2000&amp;format=webply&amp;optimize=medium">
+                        <div class="cat" id="history">
+                            <img src="./img/HISTORYIMG/History.jpg" alt="History Category">
+                           
                         </div>
+                        <p>History</p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <div class="cat"><img
-                                src="https://www.adobe.com/express/discover/ideas/media_1e0050318770e4a770caf5515f8120a3ea48c7c07.png?width=2000&amp;format=webply&amp;optimize=medium">
+                        <div class="cat" id="scince">
+                            <img src="./img/SCIENCEIMG/science.jpg" alt="Science Category">
                         </div>
+                        <p>Science</p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <div class="cat"><img
-                                src="https://www.adobe.com/express/discover/ideas/media_1e0050318770e4a770caf5515f8120a3ea48c7c07.png?width=2000&amp;format=webply&amp;optimize=medium">
+                        <div class="cat" id="novel"><img
+                                src="./img/NOVELSIMG/Novel.jpg" alt="Novel">
                         </div>
+                        <p>Novel</p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <div class="cat"><img
-                                src="https://www.adobe.com/express/discover/ideas/media_1e0050318770e4a770caf5515f8120a3ea48c7c07.png?width=2000&amp;format=webply&amp;optimize=medium">
+                        <div class="cat" id="poem"><img
+                                src="./img/poem.jpg" alt="poem">
                         </div>
+                        <p>Poem</p>
                     </div>
                 </div>
             </span>
@@ -204,7 +207,8 @@
         </section>
     </footer>
    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/page.js"></script>
 </body>
 
