@@ -3,6 +3,56 @@
 
 let user;
 
+// function setupForm(){
+// 	const form = document.getElementById("login-form");
+// 	form.addEventListener("submit", handleSubmit);
+// }//setupForm
+
+// function handleSubmit(event){
+// 	event.preventDefault();
+// 	const {
+// 		username,
+// 		password,
+// 		login_type,
+// 		result
+// 	} = event.target;
+// 	const processUser = login_type.value == "register" ? registerUser : loginUser;
+// 	const response    = processUser(username.value, password.value);
+// 	result.innerHTML  = response;
+// }//handleSubmit
+
+// function registerUser(username, password){
+// 	window.localStorage.setItem("username", username);
+// 	window.localStorage.setItem("password", password);
+// 	return `New user ${username} now registered!`;
+// }//registerUser
+
+// function loginUser(username, password){
+// 	const registeredUser     = window.localStorage.getItem("username");
+// 	const registeredPassword = window.localStorage.getItem("password");
+// 	const validUser     = username == registeredUser;
+//     user=registeredUser
+// 	const validPassword = password == registeredPassword;
+
+// 	if(validUser && validPassword){
+//          document.getElementById("login-form").innerHTML='';
+//          appendText();
+
+// 	}
+//         else if(!validUser)     return `Username ${username} has not been registered. `;
+// 	else if(!validPassword) return `Incorrect password for username ${username}`;
+// }
+// function appendText() {
+//     let text = document.createElement('p');
+//     const form = document.getElementById("login-form")
+//     text.innerText= `welcome ${user} .`;
+//     form.appendChild(text);
+//   };
+
+
+function openFormButton(event){
+  event.preventDefault();
+  document.getElementById('myForm').style.display = 'block';
 
 function openFormButton(event) {
     event.preventDefault();
@@ -71,6 +121,9 @@ function render (ar) {
             star.appendChild(form)
             action.appendChild(star);
             }
+     
+        localStorage.setItem('Book.arr',JSON.stringify(Book.arr));
+        localStorage.setItem('userName',JSON.stringify(userName));
  }
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('change',change))
@@ -336,3 +389,22 @@ let bk = ['HYPER SPACE', 'WHAT IF', 'DARK MATTER AND THE DINOSTORS', 'ABRIEF HIS
     'MAJNUN LEYLA', 'MILK & HONEY', 'HAIKU POEMS'
 ];
 
+//______________________________walaa___________________________________________//
+
+
+function saveToLocalStorage() {
+
+     JSON.parse(localStorage.setItem(Book.arr));
+
+}
+saveToLocalStorage();
+
+
+
+function saveUser (){
+    JSON.parse(localStorage.setItem(userName))
+}
+saveUser();
+
+
+//___________________________________End____________________________________//
