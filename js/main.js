@@ -1,58 +1,7 @@
 
 'use strict'
 
-let user;
 
-// function setupForm(){
-// 	const form = document.getElementById("login-form");
-// 	form.addEventListener("submit", handleSubmit);
-// }//setupForm
-
-// function handleSubmit(event){
-// 	event.preventDefault();
-// 	const {
-// 		username,
-// 		password,
-// 		login_type,
-// 		result
-// 	} = event.target;
-// 	const processUser = login_type.value == "register" ? registerUser : loginUser;
-// 	const response    = processUser(username.value, password.value);
-// 	result.innerHTML  = response;
-// }//handleSubmit
-
-// function registerUser(username, password){
-// 	window.localStorage.setItem("username", username);
-// 	window.localStorage.setItem("password", password);
-// 	return `New user ${username} now registered!`;
-// }//registerUser
-
-// function loginUser(username, password){
-// 	const registeredUser     = window.localStorage.getItem("username");
-// 	const registeredPassword = window.localStorage.getItem("password");
-// 	const validUser     = username == registeredUser;
-//     user=registeredUser
-// 	const validPassword = password == registeredPassword;
-
-// 	if(validUser && validPassword){
-//          document.getElementById("login-form").innerHTML='';
-//          appendText();
-
-// 	}
-//         else if(!validUser)     return `Username ${username} has not been registered. `;
-// 	else if(!validPassword) return `Incorrect password for username ${username}`;
-// }
-// function appendText() {
-//     let text = document.createElement('p');
-//     const form = document.getElementById("login-form")
-//     text.innerText= `welcome ${user} .`;
-//     form.appendChild(text);
-//   };
-
-
-function openFormButton(event){
-  event.preventDefault();
-  document.getElementById('myForm').style.display = 'block';
 
 function openFormButton(event) {
     event.preventDefault();
@@ -102,7 +51,6 @@ function render (ar) {
             form.action = ''
             for (let j=5; j> 0; j--) {
                 count--;
-                console.log(j,count);
                 let label = document.createElement('label');
                 let input = document.createElement('input');
                 input.type = 'radio'
@@ -168,7 +116,6 @@ function render(ar) {
         form.action = ''
         for (let j = 5; j > 0; j--) {
             count--;
-            console.log(j, count);
             let label = document.createElement('label');
             let input = document.createElement('input');
             input.type = 'radio'
@@ -190,8 +137,6 @@ function render(ar) {
 checkboxes.forEach(checkbox => checkbox.addEventListener('change', change))
 let bookCat = []
 function change(e) {
-    // console.log(e.currentTarget.checked)
-    // console.log(e.currentTarget.id)
     if (e.currentTarget.id === 'poem' || e.currentTarget.id === 'novels' || e.currentTarget.id === 'scientific' || e.currentTarget.id === 'historical') {
         if (e.currentTarget.checked) {
             bookCat.push(e.currentTarget.id)
@@ -214,7 +159,7 @@ function Book(name, description, imag, type) {
     this.type = type;
     Book.arr.push(this);
 }
-
+Book.arr = [];
 let Hyper = new Book('HYPER SPACE','is a book by Michio Kaku, a theoretical physicist from the City College of New York. It focuses on Kakus studies of higher dimensions referred to as hyperspace. The recurring theme of the book is that all four forces of the universe (the strong force, the weak force, electromagnetism and gravity) become more coherent and their description simpler in higher dimensions','../img/SCIENCEIMG/HYPER SPACE.jpg','science');
 let WHAT = new Book('WHAT IF', ' a compilation of well-researched, science-based answers to some of the craziest hypothetical questions you can imagine.', '../img/SCIENCEIMG/WHAT IF.jpg','science');
 let DARK = new Book('DARK MATTER  AND THE DINOSAURS', 'a 2015 non-fiction book by Harvard astrophysicist Lisa Randall. Randall conjectures that dark matter may have indirectly led to the extinction of dinosaurs. Other scientists generally regard this as a credible hypothesis but note a lack of supporting evidence.', '../img/SCIENCEIMG/MATTER.jpg','science');
@@ -294,7 +239,7 @@ let ANTHOLOGY = new Book('ANTHOLOGY OF CLASSICAL ARABIC POETRY', 'NTHOLOGY OF CL
 let MAJNUN = new Book('MAJNUN LEYLA', 'In the northern Arabian Peninsula during the second half of the 7th century, Qays, later known as Majnun, is in love with his cousin Leyla and decides to praise her in his love poems. Annoyed by all the noise around her, Leylas parents consider that he has compromised her honor and force her to marry another man. Qays becomes desperate and wanders alone in the desert. His father takes him to Mecca and begs him to seek Gods help to free him from his passion, but in vain. The story of Majnun and Leyla has been told in legends, songs, poems, plays and epics from the Caucasus to Africa and from the Atlantic to the Indian Ocean. It is a story of tragic and endless love, much like the later story of "Tristan and Isolde" and "Romeo and Julia" in Europe. This volume consists of a translation into English of several of Majnüns poems to Leyla together with comments and an introduction. An incurable romanticism, the deepest longing of the heart to its beloved, nostalgia, memories of a lost paradise, idealism, anticipation, joy after a reunion, bitterness after a separation, lovesickness and a consuming passion emerge from the versions that have inspired countless of people more that 1200 years ago and throughout the centuries.', '../img/POEMSIMG/MAJNUN LEYLA.jpg','poems');
 let MILK = new Book('MILK & HONEY', 'Rupi Kaur is the Writer of the Decade.” – The New Republic #1 New York Times bestseller milk and honey is a collection of poetry and prose about survival. About the experience of violence, abuse, love, loss, and femininity.The book is divided into four chapters, and each chapter serves a different purpose. Deals with a different pain. Heals a different heartache. milk and honey takes readers through a journey of the most bitter moments in life and finds sweetness in them because there is sweetness everywhere if you are just willing to look.', '../img/POEMSIMG/MILK & HONEY.jpg','poems');
 let HAIKU = new Book('HAIKU POEMS', 'My First Book of Haiku Poems introduces children to this ancient poetry form thats still a favorite among teachers, parents and children. These concise poems are easy for readers of all ages to understand and appreciate.Each of these 20 classic poems by Issa, Shiki, Basho, and other great haiku masters is paired with a stunning original painting by award-winning illustrator Tracy Gallup—which children will want to dive into and adults will want to frame.', '../img/POEMSIMG/HAIKU POEMS.jpg','poems');
-console.log(Book.arr)
+
 
 render(Book.arr);
 
@@ -325,7 +270,6 @@ function login() {
 	for(let i = 0; i < userName.length; i++) {
 		
 		if(username == userName[i].username && password == userName[i].password) {
-			// console.log(username + " is logged in!!!");
             user=username;
             document.getElementById("login-form").innerHTML='';
                  appendText();
@@ -336,7 +280,6 @@ function login() {
 
 		}
 	}
-	// console.log("incorrect username or password")
     appendText2()
 }
 localStorage.getItem("password")
@@ -370,40 +313,21 @@ function loginreturn(){
 
   location.reload();
 }
-let bk = ['HYPER SPACE', 'WHAT IF', 'DARK MATTER AND THE DINOSTORS', 'ABRIEF HISTORY OF TIME', 'THE WRIGHT BROTHERS', 'MAKING CONTACT',
-    'THE DEMON-HAUNTED WORLD', 'IN LINITE POWERS', 'PHILOSOPHY OF SCIENCE', 'A SHORT HISTORY', '100 THINGS CODING', 'A CRACK IN CREATION',
-    'A STROPHYSICS', 'THE DREAMT LAND', 'THE MAD SCIENCE BOOK', 'THE BOOK OF WHY', 'THE SELFISH GENE', 'CARL SAGAN COSMOS', 'DATA SCIENCE',
-    'ALAB OF ONES OWN', 'WORLD HISTORY', 'ANCIENT WORLD', 'THE BOOK IN BRITAIN', 'THE SHADOW KING',
-    'FALL OF GIANTS', 'GUNES GERMS AND STEEL', 'AN ORPHANS WAR', 'THE AGE AUGUSTUS', 'HAMILTION',
-    'THE FOUNTAINS OF SILENCE',
-    'BLOOD SUGAR', 'ADOLF HITLER', 'LOST ISLAMIC HISTORY',
-    'THE POWER OF BABEL', 'THE TOWER OF BABEL', 'MOSQUES', 'HOMAGE TO AL-ANDALUS', 'ANCIENT EGYPT',
-    'THE BOOK OF THE PHARAOHS', 'THE GOLDEN AGE', 'THE BOOK TITLE', 'NO PLACE LIKE HERE',
-    'THE LORD OF THE RINGS', 'HARRY POTTER', 'WORLD WHISPERER', 'DANIELLE STEEL', 'MEMORY',
-    'MOON DANCE', 'THE PAST IS RISING', 'IT', 'THE YEAR OF THE WITCHING', 'WATER & FLAME',
-    'THE SUMMER HOPE', 'WHITBY ROCK', 'THE ROAD', 'AMARA THE BRAVE', 'THE SWALLOWS', 'A DARKNESS OF DRAGONS',
-    'THE BEASTS HEART', 'TWILIGHT', 'PILLOW THOUGHTS', 'SHAKESPEARS SONNETS', 'ARABIC POEMS', 'ARAB WOMEN', 'THE NABATI POETRY',
-    'THE ARABIC PROSE POEM', 'SELECTED POEMS', 'POEMS OF ARAB ANDALUSIA', 'AL-ILBIRI', 'MYSTICAL POEMS', 'THE PROPHET', 'MODERN ARABIC POETRY',
-    'ON ENTERING THE SEA', 'WOMEN IN MY POETRY & MY LIFE', 'ARABIAN LOVE POEM', 'THE MUALLAQAT', 'ANTHOLOGY OF CLASSICAL ARABIC POETRY',
-    'MAJNUN LEYLA', 'MILK & HONEY', 'HAIKU POEMS'
-];
 
-//______________________________walaa___________________________________________//
+
 
 
 function saveToLocalStorage() {
 
-     JSON.parse(localStorage.setItem(Book.arr));
+     localStorage.setItem('book', JSON.stringify(Book.arr))
 
 }
 saveToLocalStorage();
 
 
 
-function saveUser (){
-    JSON.parse(localStorage.setItem(userName))
-}
-saveUser();
+// function saveUser () {
+//     JSON.parse(localStorage.setItem(userName))
+// }
 
-
-//___________________________________End____________________________________//
+// saveUser()

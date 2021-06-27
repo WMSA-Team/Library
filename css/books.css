@@ -51,12 +51,6 @@ main {
     place-items: center;
 }
 
-main section{
-    display: flex;
-    /* justify-content: space-around; */
-    gap: 10px;
-   
-}
 
 .poster-photo{
     width: 400px;
@@ -82,8 +76,9 @@ main section{
 }
 
 h1{
-    font-size: 40px;
+    font-size: 20px;
     font-family: 'Abril Fatface', cursive;
+    margin-bottom: 5px;
 }
 .book-input{
     display: block;
@@ -102,8 +97,68 @@ h1{
 
 }
 
-p{
-    width: 400px;
-    line-height: 1.5;
-    font-size: 17px;
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+  .card {
+    height: 350px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 250px;
+    margin: 15px;
+  }
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  .card .side {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+  }
+  .card .back {
+    background:khaki;
+    color:black;
+    text-align: center;
+    transform: rotateY(180deg);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 2px;
+    font-size: large;
+  }
+
+  
+
+  div.side.back {
+      display: grid;
+      gap:5px
+  }
+
+  div.side.back section h1 {
+      font-weight: bold;
+  }
+
+  div.side.back section p {
+      overflow: auto;
+      height: 230px;
+  }
+
+div.side img {
+    height: inherit;
 }
+
+button {
+    cursor: pointer;
+}
+
+section.button {
+    display: flex;
+    justify-content: space-around;
+}
+

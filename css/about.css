@@ -1,19 +1,37 @@
 header{
-    background-image: url(https://earth911.com/wp-content/uploads/2018/06/book-bindings-books-bookstore-1122865.jpg);
+    background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
     display: flex;
-      text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: gray; */
   
 }
 
-
-
-
-
-.logo {
-    width: 100px;
-    height: 100px;
-
+header img {
+    width: 70px;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-family: 'Bad Script', cursive;
+}
+
 
 .img{
     padding: 5px;
