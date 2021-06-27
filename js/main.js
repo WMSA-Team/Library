@@ -4,6 +4,7 @@
 // window.addEventListener("DOMContentLoaded", setupForm);
 
 let user;
+
 // function setupForm(){
 // 	const form = document.getElementById("login-form");
 // 	form.addEventListener("submit", handleSubmit);
@@ -129,6 +130,8 @@ function render (ar) {
             action.appendChild(star);
             }
         // }
+        localStorage.setItem('Book.arr',JSON.stringify(Book.arr));
+        localStorage.setItem('userName',JSON.stringify(userName));
     // }
  }
 
@@ -178,3 +181,22 @@ render(Book.arr);
  ];
 
 
+//______________________________walaa___________________________________________//
+
+
+function saveToLocalStorage() {
+
+     JSON.parse(localStorage.setItem(Book.arr));
+
+}
+saveToLocalStorage();
+
+
+
+function saveUser (){
+    JSON.parse(localStorage.setItem(userName))
+}
+saveUser();
+
+
+//___________________________________End____________________________________//
