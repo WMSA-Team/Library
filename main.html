@@ -5,38 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-
-   
-
-
-
 
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="./main.html"> 
-                <img src="./img/logo.png" alt="Logo"> 
-            </a>
+          <a href="./main.html">
+            <img src="./img/logo.png" alt="Logo">
+          </a>
+          <button class="openFormButton" onclick="openFormButton(event)">Donate a Book</button>
         </div>
-        <fieldset>
-        <form id="logInForm">
-        <section>
-            <label for="userName">User Name:</label>
-            <input type="text" id="userName" name="userName" placeholder="example">
-        </section>
-        <section>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-        </section>
-        <section>
-            <button type="submit">Log In</button>
-            <a href='#'><button>Register</button></a>
-        </section>
-          </form>
-        </fieldset>
+        <div class="popupForm" id="myForm" >
+            <form class="form-container">
+              <label for="bookName">Book Name</label>
+              <input type="text" id="bookName" name="bookName">
+              <br>
+              <label for="bookDescription">Book Description</label>
+              <input type="text" id="bookDescription" name="bookDescription">
+              <br>
+              <label for="author"> Book Author</label>
+              <input type="text" id="author" name="author">
+              <br>
+              <button type="submit" class="submitButton">Donate</button>
+              <button class="cancelButton" onclick="closeButton(event)">close</button>
+            </form>
+        </div>
+        <form id="login-form" action="submit">
+          <fieldset>
+            <div>
+              <label for="username">Username</label>
+              <input class="user" id="username" type="text" name="username" placeholder="Eg. jane_doe" required/>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input class="pass" id="password" type="password" name="password" required />
+            </div>
+          </fieldset>
+          <button type="submit" value="Submit">Login</button>
+          <output name="result"></output>
+        </form>
     </header>
     <hr>
     <main>
@@ -48,484 +58,7 @@
               <li><input type="checkbox" id="poem" value="poem"><label for="poem">Poem</label></li>
             </ul>
           </div>
-                <section class="card-container">
-                    <div class="card">
-                      <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                      <div class="side back">
-                          <section>
-                              <h1>
-                                The Canon of Medicine 
-                              </h1>
-                              <p>
-                                is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                 Chinese medicine and Indian medicine.
-                                
-                                The Canon of Medicine remained a medical authority for centuries. 
-                                It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                
-                              </p>
-                          </section>
-                          <section>
-                              <button>aaaa</button>
-                              <button>ssss</button>
-                          </section>
-                      </div>
-                    </div>
-                    <div class="card">
-                        <div class="side">
-                            <img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World">
-                        </div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section>
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="side"><img src="https://a5dr.com/wiki/wp-content/uploads/2020/01/043abc72-f7ca-4004-9839-fe46581123cd.jpg" alt="Jimmy Eat World"></div>
-                        <div class="side back">
-                            <section>
-                                <h1>
-                                  The Canon of Medicine 
-                                </h1>
-                                <p>
-                                  is an encyclopedia of medicine in five books compiled by Persian Muslim physician-philosopher Avicenna (Ibn Sina) and completed in 1025.
-                                  It presents an overview of the contemporary medical knowledge of the Islamic world, <br>
-                                  which had been influenced by earlier traditions including Greco-Roman medicine (particularly Galen),[2] Persian medicine,
-                                   Chinese medicine and Indian medicine.
-                                  
-                                  The Canon of Medicine remained a medical authority for centuries. 
-                                  It set the standards for medicine in Medieval Europe and the Islamic world and was used as a standard medical textbook through the 18th century in Europe.
-                                  It is an important text in Unani medicine, a form of traditional medicine practiced in India.
-                                  
-                                </p>
-                            </section>
-                            <section class="button">
-                                <button>aaaa</button>
-                                <button>ssss</button>
-                            </section>
-                        </div>
-                      </div>
+                <section class="card-container" id="cardContainer">
                   </section>
     </main>
     <hr>
@@ -534,34 +67,6 @@
           <img src="./img/footer.png" alt="">
         </div>
       <p class="right">All Right Reserved &copy; WMAS</p>
-
-      <!-- <div class="rating">
-        <i class="rating__star far fa-star"></i>
-        <i class="rating__star far fa-star"></i>
-        <i class="rating__star far fa-star"></i>
-        <i class="rating__star far fa-star"></i>
-        <i class="rating__star far fa-star"></i>
-      </div> -->
-
-      
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-
-
-
-
-
-      
     </footer>
     <script src="./js/main.js"></script>
 </body>
