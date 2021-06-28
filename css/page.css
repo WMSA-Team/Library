@@ -82,6 +82,8 @@ main {
 
 #events {
     margin: 50px auto;
+    width: 1000px;
+    height: 400px;
     
 }
 
@@ -120,13 +122,10 @@ nav h4 {
 }
 
 #event {
-  /* border: 2px solid black; */
-  /* padding: 5px; */
   display: flex;
   gap: 10px;
-    width: 1000px;
-    height: 100px;
-    /* place-self: center; */
+  width: 1000px;
+   
   }
   
   
@@ -150,12 +149,17 @@ nav h4 {
 #randomBooks {
   background-color: rgb(236, 236, 236);
   width: 100%;
+  
   text-align: center;
   height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
 }
 
 #fourBooks {
-  width: 100%;
+  /* width: 100%; */
+  width: 1000px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -171,35 +175,10 @@ nav h4 {
 
 
 .card {
-
-/*   height: 350px;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
-  width: 250px;
-  margin: 15px;
-}
-.card:hover {
-  transform: rotateY(180deg);
-}
-.card .side {
-  backface-visibility: hidden;
-  border-radius: 6px;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-}
-.card .back {
-  background:khaki;
-  color:black;
-  text-align: center;
-  transform: rotateY(180deg);
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  margin-top: 2px; */
-    height: 350px;
+    height: 250px;
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
-    width: 250px;
+    width: 220px;
     margin: 15px;
   }
   .card:hover {
@@ -241,51 +220,57 @@ a {
   }
 
   div.side.back section h1 {
+    font-size: 20px;
       font-weight: bold;
   }
 
   div.side.back section p {
       overflow: auto;
-      height: 180px;
+      /* height: 70px; */
   }
 
 div.side img {
     height: inherit;
+    width: 200px;
 }
 
 #catagory {
-    background-color: rgb(200, 199, 199);
+    background-color: rgb(231, 226, 226);
     width: 100%;
     text-align: center;
     /* height: 150%; */
+    display: grid;
+    place-items: center;
+    padding: 20px 0;
 }
 
 #fourCat {
-    width: 100%;
+    width: 1000px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
     height: 100%;
     /* margin-bottom: 10px; */
+   
 }
 
 .cat {
-    height: 350px;
+    height: 250px;
     /* transform-style: preserve-3d; */
     transition: all 0.5s ease-in-out;
-    width: 250px;
+    width: 220px;
     margin: 15px;
     cursor: pointer;
 }
 
 .cat a {
-  height: 350px;
+  height: 250px;
     /* transform-style: preserve-3d; */
     transition: all 0.5s ease-in-out;
-    width: 250px;
-    margin: 15px;
+    width: 220px;
+    /* margin: 15px; */
     cursor: pointer;
   
 }
@@ -296,6 +281,7 @@ div.side img {
 
 .cat a img {
     height: inherit;
+    width: 200px;
 }
 
 footer {

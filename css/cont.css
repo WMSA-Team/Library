@@ -1,19 +1,57 @@
 
 body {
-    width:100%;
-    margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  background: #ECF0F1;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
 }
 
 
 footer {
-   
-    /* background-image: url(https://library.umaine.edu/wp-content/uploads/sites/77/2020/11/Blue-Overlay-846x290.jpg); */
-    height: 150px;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    background-color: black;
+  /* background-image: url('../img/aaaa.png'); */
+  background-color: black;
+  width: 100%;
+  background-attachment: fixed;
+  height: 280px;
+  display: grid;
+  place-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: 700;
+  padding: 40px 0;
+  text-align: center;
+}
 
+footer img {
+  width: 70px;
+
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  font-family: 'Bad Script', cursive;
+  text-align: center;
+}
+
+#footer p {
+  font-size: 25px;
+  font-family: 'Bad Script', cursive;
+  text-align: center;
+}
+
+footer span p {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ppp {
@@ -44,17 +82,23 @@ text-align: center;
 }
 main {
    
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* justify-content: center; */
     /* margin-top: 20px;
     margin-bottom: 20px; */
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    /* justify-content: space-between; */
+    width: 100%;
+    place-items: center;
 
 
 }
 
-
+#mainsect {
+  margin: 40px 0;
+  display: flex;
+  gap: 30px;
+}
 
 
 
@@ -94,19 +138,26 @@ input[type=text], select, textarea {
     padding: 20px;
   }
 
-header{
-  background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
+  header {
+    background: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg) #22222290;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    height: 400px;
+    background-blend-mode: overlay;
+}
+
+#phone {
   display: flex;
-  justify-content:space-between;
-  /* align-items:baseline; */
-  height: 250px;
-  /* background-color: gray; */
-  position: relative;
+  font-size: 72px;
+  /* font-weight: 700; */
+  text-transform: uppercase;
   align-items: center;
-  grid-template-rows: auto;
-  
-
-
+  height: 100%;
 }
 
 header img {
@@ -119,23 +170,13 @@ a {
 }
 
 header nav a {
-  /* margin: 10px; */
+  margin: 10px;
   text-decoration: none;
   color: white;
   font-weight: bolder;
   /* margin-right: 100px; */
-  padding: 15px;
+  /* padding: 15px; */
 
-}
-
-header nav {
-  margin-right: 100px;
-  position: relative;
-  bottom: 40px;
- 
-  
-  
-  
 }
 
 
@@ -143,31 +184,30 @@ header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* gap: 20px; */
+  gap: 20px;
   font-size: 25px;
   font-family: 'Bad Script', cursive;
-  text-decoration: none;
-  color: white;
-  margin-left: 100px;
-  position: relative;
-  bottom: 40px;
+}
+
+#logo p {
+  font-size: 25px;
 }
 
 .para {
-   margin-left: 120px;
-   margin-top: 20px;
+   /* margin-left: 120px;
+   margin-top: 20px; */
     
 }
 
 h1 {
     font-family: 'Righteous', cursive;
-    font-size: 90px;
+    font-size: 60px;
     color: rgb(248, 241, 210);
     
 }
 
 p {
-    margin: 10px;
+    /* margin: 10px; */
     font-size: 20px;
     
 }
@@ -222,8 +262,8 @@ p {
   }  
   
   .live {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
+    width: 400px;
   }
 
   
