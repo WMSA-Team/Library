@@ -7,11 +7,12 @@ body {
 
 footer {
    
-    background-image: url(https://library.umaine.edu/wp-content/uploads/sites/77/2020/11/Blue-Overlay-846x290.jpg);
+    /* background-image: url(https://library.umaine.edu/wp-content/uploads/sites/77/2020/11/Blue-Overlay-846x290.jpg); */
     height: 150px;
     text-align: center;
     align-items: center;
     position: relative;
+    background-color: black;
 
 }
 
@@ -44,16 +45,16 @@ text-align: center;
 main {
    
     margin: 0 auto;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* justify-content: center; */
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    display: flex;
+    justify-content: space-between;
+
+
 }
 
-main {
-    display: flex;
-    gap: 30px;
-    
-}
+
 
 
 
@@ -89,16 +90,22 @@ input[type=text], select, textarea {
   .container {
     border-radius: 5px;
     background-color: #ffffff;
-   
+   margin-right: 80px;
     padding: 20px;
   }
 
 header{
   background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content:space-between;
+  /* align-items:baseline; */
+  height: 250px;
   /* background-color: gray; */
+  position: relative;
+  align-items: center;
+  grid-template-rows: auto;
+  
+
 
 }
 
@@ -112,33 +119,51 @@ a {
 }
 
 header nav a {
-  margin: 10px;
+  /* margin: 10px; */
   text-decoration: none;
   color: white;
   font-weight: bolder;
+  /* margin-right: 100px; */
+  padding: 15px;
+
 }
+
+header nav {
+  margin-right: 100px;
+  position: relative;
+  bottom: 40px;
+ 
+  
+  
+  
+}
+
+
 #logo {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  /* gap: 20px; */
   font-size: 25px;
   font-family: 'Bad Script', cursive;
   text-decoration: none;
   color: white;
+  margin-left: 100px;
+  position: relative;
+  bottom: 40px;
 }
 
 .para {
-    position: relative;
-    right: 250px;
+   margin-left: 120px;
+   margin-top: 20px;
     
 }
 
 h1 {
     font-family: 'Righteous', cursive;
     font-size: 90px;
-    color: #053742;
-    margin-bottom: 30px;
+    color: rgb(248, 241, 210);
+    
 }
 
 p {
@@ -153,7 +178,7 @@ p {
   text-align: center;  
     margin: 5px 2px;  
     font-size: 30px;  
-    width: 50px;  
+    /* width: 50px;   */
   }  
   .fa-facebook {  
     background: #3B5998;  
@@ -195,3 +220,10 @@ p {
   .fa:hover {  
       opacity: 0.9;  
   }  
+  
+  .live {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  

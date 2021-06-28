@@ -7,7 +7,7 @@ body {
 
 header {
     
-    background-image: url('../img/lb.jpg') ;
+    background: url('../img/lb.jpg')#22222285 ;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -15,6 +15,7 @@ header {
     display: grid;
     grid-template-rows: 0.4fr 1fr;
     gap: 50px;
+    background-blend-mode: overlay;
 }
 
 header img {
@@ -54,7 +55,12 @@ main div div p {
   /* width: 80%; */
   justify-content: center;
   align-content: center;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  /* align-items:center; */
+  margin-left: 270px;
+margin-right: 270px;
+
+
 }
 
 button {
@@ -353,7 +359,7 @@ footer img {
 
 .container.py-5 {
   display: grid;
-  place-items: center;
+  /* place-items: center; */
   /* width: 90%; */
   text-align: center;
 }
@@ -367,7 +373,7 @@ footer img {
   }
 
   .output h1 {
-    font-size:30px;
+    font-size:35px;
     text-transform: capitalize;
   }
   
