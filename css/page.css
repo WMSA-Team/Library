@@ -141,6 +141,10 @@ nav h4:hover {
     
 }
 
+/* .cat a {
+  width: 20px;
+} */
+
 
 
 .card {
@@ -227,11 +231,21 @@ div.side img {
     cursor: pointer;
 }
 
+.cat a {
+  height: 350px;
+    /* transform-style: preserve-3d; */
+    transition: all 0.5s ease-in-out;
+    width: 250px;
+    margin: 15px;
+    cursor: pointer;
+  
+}
+
 .cat:hover {
     transform: scale(1.12);
 }
 
-.cat img {
+.cat a img {
     height: inherit;
 }
 
