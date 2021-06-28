@@ -116,7 +116,7 @@ nav h4 {
     font-family: 'Open Sans', sans-serif;
   }
 
-  nav h4:hover {
+ .active, nav h4:hover {
     border-color: transparent;
     background-color: #c48e81ab;
 }
@@ -385,6 +385,18 @@ footer img {
     text-align: center;
   }
 
+
+.btn:checked {
+  border-color: transparent;
+  background-color: #c48e81ab;
+}
+
+.btn:active {
+  border-color: transparent;
+    background-color: #c48e81ab;
+}
+
+
 .container.py-5 {
   display: grid;
   /* place-items: center; */
@@ -446,7 +458,7 @@ footer img {
 
   body {
     font-family: 'Montserrat', sans-serif;
-    background: #ECF0F1;
+    /* background: #ECF0F1; */
   }
   
   button {

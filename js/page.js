@@ -316,13 +316,12 @@ localStorage.setItem('Book.arr', JSON.stringify(Book.arr));
 // console.log(JSON.stringify(Book.arr[0]))
 fourCat.addEventListener('click', chooseCat)
 
-/*
-let btns = document.getElementById("btns");
-let btn = btns.getElementsByClassName("btn");
-for (let i = 0; i < btn.length; i++) {
+let btns = document.getElementById('btns');
+let btn = btns.getElementsByClassName('btn');
+for (let i = 0; i<btn.length; i++) {
   btn[i].addEventListener("click", function() {
-  let current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}*/
+    let current = btns.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  })
+}
