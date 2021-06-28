@@ -49,7 +49,7 @@ function pickaBooks (ev) {
   if (ev.target.innerText === 'More Info') {
     let index = Books.map(function(x) {return x.name; }).indexOf(ev.target.id);
     localStorage.setItem('pickedBook', JSON.stringify(Books[index]))
-    window.location.href = '../book.html'
+    // window.location.href = '../book.html'
     // console.log(ev.target)
    }
 }
