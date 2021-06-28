@@ -9,7 +9,8 @@ var speedForward = 90, //Typing Speed
     speedBetweenLines = 1000, //Wait between first and second lines
     speedBackspace = 100; //Backspace Speed
 
-const quotes = ['So many books, so little time.'
+const quotes = [
+  'So many books, so little time.'
   ,'There is no friend as loyal as a book.'
   ,'There is no friend as loyal as a book.'
   ,'A great book should leave you with many experiences, and slightly exhausted at the end. You live several lives while reading.'
@@ -22,7 +23,8 @@ const quotes = ['So many books, so little time.'
   ,'If you don’t like to read, you haven’t found the right book.'
   ,'When I have a little money, I buy books; and if I have any left, I buy food and clothes.'
   ,'That’s the thing about books. They let you travel without moving your feet.'
-  ,'A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.'];
+  ,'A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.'
+];
 
 function typeWriter(id, ar) {
   var element = $("#" + id),
