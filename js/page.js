@@ -165,28 +165,16 @@ function typeWriter(id, ar) {
         text1.innerText= `Overview
         Thinking about a new career in software development? Start here! In this workshop, you'll get a taste of a day in the life of a software developer.
         Code 101 is about learning what it looks like to be a software developer through an immersive course for beginners that focuses on front-end web development technologies.
-        Get a taste of the Code Fellows learning experience, find out how websites are built, and code a webpage yourself using professional coding practices.
-        Outcomes
-        At the end of this workshop, you will:
-        Understand the basics of what it means to be a professional software developer.
-        Understand how HTML and CSS work together to create the modern web.
-        Create a complete website.
-        Know how to deploy your website and be able to share your accomplishments with friends and family.
-        Be able to identify whether a career in coding and the Code Fellows program is right for you.
-        Topics
-        The Modern Web
-        How the pieces work together`
+        Get a taste of the Code Fellows learning experience, and code a webpage yourself using professional coding practices.Outcomes`
         
         let img1 = document.getElementById('img')
         img1.src= 'https://images.ctfassets.net/qjy3jg1udcmq/1h195fAfGwKOQOeeMcoQky/830de226f1395841801b6557cbee6eec/code-101.jpg';
        }
        else if (e.target.id === 'third'){
         let heading2 = document.getElementById('aj')
-        heading2.innerText= `27/June/2021 Created This Wire-Frame .`;
+        heading2.innerText= `27/Jun/2021 Created This Wire-Frame.`;
         let text2 = document.getElementById('pra')
-        text2.innerText= `Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada.
-        Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-        Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus.`;
+        text2.innerText= `Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada.`;
         let img2 = document.getElementById('img')
         img2.src= `https://dgosxlrnzhofi.cloudfront.net/custom_page_images/430/page_images/code-201.png?1440114811`;
        }
@@ -194,6 +182,7 @@ function typeWriter(id, ar) {
       }};
 
     events.addEventListener('click', eventHandler);
+
 
  function getRandomArbitrary(min, max) {
       return Math.floor(Math.random() * (max - min) + min);
@@ -327,3 +316,13 @@ localStorage.setItem('Book.arr', JSON.stringify(Book.arr));
 // console.log(JSON.stringify(Book.arr[0]))
 fourCat.addEventListener('click', chooseCat)
 
+/*
+let btns = document.getElementById("btns");
+let btn = btns.getElementsByClassName("btn");
+for (let i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", function() {
+  let current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}*/
