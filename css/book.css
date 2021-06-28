@@ -25,6 +25,7 @@ body {
     gap: 20px;
     font-size: 25px;
     font-family: 'Bad Script', cursive;
+    margin-right: 30rem;
 }
 
 header img {
@@ -49,6 +50,9 @@ header nav a {
 main {
     display: grid;
     place-items: center;
+    width: 1000px;
+    justify-content: center;
+
 }
 
 main section{
@@ -62,16 +66,28 @@ main section{
     width: 400px;
     height: 600px;
     
+    
+    
 }
 .left-div{
-   
-    /* margin-left: 300px; */
+    float: left;
+    
+
+    width: 400px;
+
+    /* padding-right: 240px; */
+    padding:10px
+
 }
 
 .right-div{
     
-    margin-left: 10px;
-    margin-top: 20px;
+
+     margin-left: 10px;
+    margin-top: 20px; 
+    
+     width:400px
+     
 
 }
 
@@ -91,6 +107,8 @@ h1{
     margin-left: 10px;
     font-size: 20px;
     color: gray;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
 
 }
@@ -99,14 +117,15 @@ h1{
     line-height: 2;
     margin-left: 60px;
     font-size: 20px;
-
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-
+/* 
 p{
     width: 400px;
     line-height: 1.5;
     font-size: 17px;
-}
+} */
 
 header {
     padding: 20px 0;
@@ -118,6 +137,82 @@ header {
     align-items: center;
     color: white;
     flex-direction: column;
-    height: 400px;
+    height: 200px;
     background-blend-mode: overlay;
+}
+
+
+
+footer {
+    /* background-image: url('../img/aaaa.png'); */
+    background-color: black;
+    width: 100%;
+    background-attachment: fixed;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: 700;
+    padding:40px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 70px;
+    
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Bad Script', cursive;
+    text-align: center;
+  }
+
+  
+.nav-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#logo a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-family: 'Bad Script', cursive;
+    margin-left: 170px;
+    
+}
+
+header img {
+    width: 70px;
+}
+
+header nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+#navbar {
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: sticky;
 }
