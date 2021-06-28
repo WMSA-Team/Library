@@ -1,21 +1,23 @@
 body {
-    height: 100%;
-    /* overflow: auto; */
+    font-family: 'Montserrat', sans-serif;
+    /* background: #ECF0F1; */
     display: grid;
-    /* grid-template-rows: auto 1fr ; */
     gap: 30px;
-}
+    place-items: center;
+  }
 
-/* header {
-    background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-} */
 #logo a {
     text-decoration: none;
     color: white;
+}
+
+.category-title {
+    display: flex;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-items: center;
+    height: 100%;
 }
 
 #logo {
@@ -25,7 +27,7 @@ body {
     gap: 20px;
     font-size: 25px;
     font-family: 'Bad Script', cursive;
-    margin-right: 30rem;
+    /* margin-right: 30rem; */
 }
 
 header img {
@@ -48,19 +50,13 @@ header nav a {
 }
 
 main {
-    display: grid;
-    place-items: center;
-    width: 1000px;
-    justify-content: center;
-
-}
-
-main section{
     display: flex;
-    /* justify-content: space-around; */
-    gap: 10px;
-   
+    justify-content: flex-start;
+    width: 1000px;
+    gap: 25px;
+
 }
+
 
 .poster-photo{
     width: 400px;
@@ -69,15 +65,11 @@ main section{
     
     
 }
-.left-div{
-    float: left;
-    
 
-    width: 400px;
 
-    /* padding-right: 240px; */
-    padding:10px
-
+.left-div img {
+    height: 450px;
+    width: 350px;
 }
 
 .right-div{
@@ -128,17 +120,17 @@ p{
 } */
 
 header {
-    padding: 20px 0;
-}
-header {
-    background: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg) #22222270;
+    background: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg) #22222290;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: end;
     align-items: center;
     color: white;
     flex-direction: column;
-    height: 200px;
+    height: 400px;
     background-blend-mode: overlay;
+    width: 100%;
 }
 
 
@@ -174,7 +166,7 @@ footer img {
   }
 
   
-.nav-header {
+  .nav-header {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -194,8 +186,6 @@ footer img {
     gap: 20px;
     font-size: 25px;
     font-family: 'Bad Script', cursive;
-    margin-left: 170px;
-    
 }
 
 header img {
@@ -203,11 +193,12 @@ header img {
 }
 
 header nav a {
-    margin: 10px;
+    /* margin: 10px; */
     text-decoration: none;
     color: white;
     font-weight: bolder;
 }
+
 
 #navbar {
      display: flex;
