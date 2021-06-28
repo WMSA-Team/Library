@@ -71,110 +71,127 @@ button {
 main {
     display: grid;
     place-items: center;
-    gap: 200px;
+    gap: 150px;    
 }
 
 #events {
     margin: 50px auto;
-    text-align: center;
     
 }
 
 #events h1 {
-    color: gray;
+    color: rgb(26, 25, 25);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
+
+
 nav {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  
 }
 
 nav h4 {
-    margin: 5px;
-    padding: 7px;
-    border-style: none;
-    border-style: none;
-    border-left-width: 0px;
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-    border-radius: 0px;
-    border-color: transparent;
-    background-color: #f2f2f2;
+  margin: 20px;
+  padding: 8px;
+  border-style: none;
+  border-style: none;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: #f2f2f2;
     cursor: pointer;
-}
+    font-family: 'Open Sans', sans-serif;
+  }
 
-nav h4:hover {
+  nav h4:hover {
     border-color: transparent;
-    background-color: #cbb58b;
+    background-color: #c48e81ab;
 }
 
 #event {
-    /* border: 2px solid black; */
-    /* padding: 5px; */
-    display: flex;
-    gap: 10px;
-    width: 1200px;
-    height: 400px;
+  /* border: 2px solid black; */
+  /* padding: 5px; */
+  display: flex;
+  gap: 10px;
+    width: 1000px;
+    height: 100px;
     /* place-self: center; */
+  }
+  
+  
+  
+  #event img {
+    width: 350px;
+    height: 250px;
+    margin-right: 47px;
+    
+  }
+#aj{
+  text-align: left;
 }
-
-#event img {
-    width: 600px;
-    height: 400px;
-   
+  #pra{
+    margin-left: 33px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    
 }
 
 #randomBooks {
-    background-color: rgb(236, 236, 236);
-    width: 100%;
-    text-align: center;
-    height: 100%;
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  text-align: center;
+  height: 100%;
 }
 
 #fourBooks {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-    
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  
 }
 
 
 
 .card {
-    height: 350px;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    width: 250px;
-    margin: 15px;
-  }
-  .card:hover {
-    transform: rotateY(180deg);
-  }
-  .card .side {
-    backface-visibility: hidden;
-    border-radius: 6px;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-  }
-  .card .back {
-    background:khaki;
-    color:black;
-    text-align: center;
-    transform: rotateY(180deg);
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-top: 2px;
+  height: 350px;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 250px;
+  margin: 15px;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background:khaki;
+  color:black;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-top: 2px;
     font-size: large;
   }
-
-#pra {
-  overflow: auto;
+  
+  #pra {
+    overflow: auto;
    height: 320px;
-}
+  }
 
 a {
   text-decoration: none;
