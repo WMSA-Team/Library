@@ -9,7 +9,8 @@ var speedForward = 90, //Typing Speed
     speedBetweenLines = 1000, //Wait between first and second lines
     speedBackspace = 100; //Backspace Speed
 
-const quotes = ['So many books, so little time.'
+const quotes = [
+  'So many books, so little time.'
   ,'There is no friend as loyal as a book.'
   ,'There is no friend as loyal as a book.'
   ,'A great book should leave you with many experiences, and slightly exhausted at the end. You live several lives while reading.'
@@ -22,7 +23,8 @@ const quotes = ['So many books, so little time.'
   ,'If you don’t like to read, you haven’t found the right book.'
   ,'When I have a little money, I buy books; and if I have any left, I buy food and clothes.'
   ,'That’s the thing about books. They let you travel without moving your feet.'
-  ,'A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.'];
+  ,'A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.'
+];
 
 function typeWriter(id, ar) {
   var element = $("#" + id),
@@ -95,13 +97,16 @@ function typeWriter(id, ar) {
 
   let cardContainer = document.getElementById('fourBooks');
 
-  // let cardContainer = document.getElementById('cardContainer');
   function render (ar) {
     cardContainer.innerHTML = ''
+    let randomArr = []
     for (let i=0; i<4; i++){
-      // console.log(ar.length)
-      let random = getRandomArbitrary(0,ar.length);
-      console.log(random)
+      let random = getRandomArbitrary(0,ar.length-1);
+      do {
+      random = getRandomArbitrary(0,ar.length)
+      } while (randomArr.indexOf(random) >= 0)
+      randomArr.push(random)
+      // console.log(random)
       let card = document.createElement('div');
             card.className = 'card'
             // create side div element
@@ -121,6 +126,9 @@ function typeWriter(id, ar) {
             action.className = 'action'
             let buy = document.createElement('button')
             buy.innerText = 'More Info'
+            let a = document.createElement('a')
+            a.href = './book.html'
+            a.appendChild(buy)
             buy.setAttribute('id',ar[random].name)
             side.appendChild(imag);
             card.appendChild(side);
@@ -128,7 +136,7 @@ function typeWriter(id, ar) {
             section1.appendChild(h1);
             section1.appendChild(p);
             card.appendChild(sideBack);
-            action.appendChild(buy);
+            action.appendChild(a);
             sideBack.appendChild(action)
             cardContainer.appendChild(card)
             let star = document.createElement('div')
@@ -280,8 +288,9 @@ function pickaBook (e) {
   if (e.target.innerText === 'More Info') {
     let index = Book.arr.map(function(x) {return x.name; }).indexOf(e.target.id);
     localStorage.setItem('pickedBook', JSON.stringify(Book.arr[index]))
-    window.location.href = '../Library/book.html'
-    console.log(e.target)
+    // window.location.href = '../book.html'
+    //window.location.href = '../Library/book.html'
+    // console.log(e.target)
    }
 }
 
@@ -298,7 +307,9 @@ function chooseCat(e) {
       }
     }
     localStorage.setItem('pickedCat', JSON.stringify(thisType))
-    window.location.href = '../Library/books.html'
+    // window.location.href = '../books.html'
+    //window.location.href = '../Library/books.html'
+
   }
 }
 localStorage.setItem('Book.arr', JSON.stringify(Book.arr));
