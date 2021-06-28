@@ -6,13 +6,13 @@ body {
     gap: 30px;
 }
 
-header {
+/* header {
     background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
-}
+} */
 #logo a {
     text-decoration: none;
     color: white;
@@ -106,4 +106,18 @@ p{
     width: 400px;
     line-height: 1.5;
     font-size: 17px;
+}
+
+header {
+    padding: 20px 0;
+}
+header {
+    background: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg) #22222270;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    height: 400px;
+    background-blend-mode: overlay;
 }

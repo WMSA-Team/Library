@@ -299,7 +299,7 @@ function pickaBook (e) {
     localStorage.setItem('pickedBook', JSON.stringify(Book.arr[index]))
     // window.location.href = '../book.html'
     //window.location.href = '../Library/book.html'
-    console.log(e.target)
+    // console.log(e.target)
    }
 }
 

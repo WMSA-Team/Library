@@ -6,13 +6,22 @@ body {
     gap: 30px;
 }
 
-header {
+/* header {
     background-image: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg);
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
+} */
+
+.nav-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0;
 }
+
 #logo a {
     text-decoration: none;
     color: white;
@@ -99,7 +108,7 @@ h1{
 
 
 .card-container {
-    width: 100%;
+    width: 1000px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -111,6 +120,7 @@ h1{
     transition: all 1s ease-in-out;
     width: 250px;
     margin: 15px;
+    border-radius: 10px;
   }
   .card:hover {
     transform: rotateY(180deg);
@@ -121,10 +131,11 @@ h1{
     height: 100%;
     position: absolute;
     overflow: hidden;
-    width: 100%;
+    width: 250px;
   }
   .card .back {
-    background:khaki;
+    background: white;
+    border: 1px solid black;
     color:black;
     text-align: center;
     transform: rotateY(180deg);
@@ -137,8 +148,16 @@ h1{
 
   div.side.back {
       display: grid;
-      gap:5px
+      /* gap:25px */
+      /* height: 200px; */
   }
+  div.side.back section {
+    display: grid;
+    gap: 70px;
+    text-align: left;
+  }
+
+
 
   div.side.back section h1 {
       font-weight: bold;
@@ -151,6 +170,7 @@ h1{
 
 div.side img {
     height: inherit;
+    width: 100%;
 }
 
 button {
@@ -160,5 +180,105 @@ button {
 section.button {
     display: flex;
     justify-content: space-around;
+}
+
+
+header {
+    background: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg) #22222290;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    height: 400px;
+    background-blend-mode: overlay;
+}
+
+.category-title {
+    display: flex;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-items: center;
+    height: 100%;
+}
+
+
+footer {
+    /* background-image: url('../img/aaaa.png'); */
+    background-color: black;
+    width: 100%;
+    background-attachment: fixed;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: 700;
+    padding:40px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 70px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Bad Script', cursive;
+    text-align: center;
+  }
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ECF0F1;
+}
+
+button {
+  position: relative;
+  /* width: 250px; height: 60px; */
+  background: #E74C3C;
+  /* margin: 0 auto; */
+  /* margin-top: 40px; */
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color .3s;
+  /* Typo */
+  /* line-height: 60px; */
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+button:after {
+  position: absolute;
+  top: 90%; left: 0;
+  width: 100%; height: 100%;
+  background: #C0392B;
+  content: "";
+  z-index: -2;
+  transition: transform .3s;
+}
+
+button:hover::after {
+  transform: translateY(-80%);
+  transition: transform .3s;
+}
+
+.action {
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
 }
 
