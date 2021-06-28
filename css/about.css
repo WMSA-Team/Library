@@ -4,7 +4,7 @@ header{
     justify-content: space-around;
     align-items: center;
     /* background-color: gray; */
-  
+ height: 300px;
 }
 
 header img {
@@ -84,9 +84,11 @@ color: darkgoldenrod;
      text-indent: 30px;
     
   }
-footer{
-    background-image: url(https://www.adobe.com/express/create/cover/media_1e49b5b48bff6cd490d41d7bee28f57cbead6d5b0.png?width=2000&format=webply&optimize=medium);
+
+footer {
+    background-color: black;
     margin-top:  350px;
+    height: 200px;
    
   
 }
