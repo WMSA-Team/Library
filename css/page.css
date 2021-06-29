@@ -490,6 +490,11 @@ footer img {
     
   }
 
+  .action a {
+    width: 80%;
+  }
+
+
   main button:after, header button:after {
     position: absolute;
     top: 90%; left: 0;
@@ -615,6 +620,7 @@ footer img {
   /* margin: 0; */
   width: fit-content;
 }
+
 
 
 
