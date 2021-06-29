@@ -64,7 +64,6 @@ font-family: monospace;
 justify-content: center;
 align-items: center;
 text-align: center;
-
    
 }
 
@@ -90,6 +89,7 @@ main {
     /* justify-content: space-between; */
     width: 100%;
     place-items: center;
+    
 
 
 }
@@ -134,7 +134,7 @@ input[type=text], select, textarea {
   .container {
     border-radius: 5px;
     background-color: #ffffff;
-   margin-right: 80px;
+   /* margin-right: 80px; */
     padding: 20px;
   }
 
@@ -262,8 +262,11 @@ p {
   }  
   
   .live {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 400px;
   }
 
-  
+  .aaa {
+    /* line-height: 30px; */
+    margin-bottom: 10px;
+  }
