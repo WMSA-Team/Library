@@ -154,7 +154,7 @@ h1{
   }
   div.side.back section {
     display: grid;
-    gap: 50px;
+    gap: 30px;
     text-align: left;
     margin-left: 5px;
   }
@@ -169,7 +169,7 @@ h1{
 
   div.side.back section p {
       overflow: auto;
-      height: 180px;
+      /* height: 180px; */
   }
 
 div.side img {
@@ -177,8 +177,16 @@ div.side img {
     width: 100%;
 }
 
+.action a {
+    width: 200px;
+    height: 50px;
+}
+
 button {
     cursor: pointer;
+    border: none;
+    width: 100%;
+    height: 100%;
 }
 
 section.button {
