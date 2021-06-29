@@ -11,16 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="./css/reset.css">
-
     <link rel="stylesheet" href="./css/page.css">
+
 </head>
 
 
 <body>
     <header>
-        <section id="navbar">
-           
-            <section id="logo">
+        <section id="navbar" >
+            <section id="logo" >
                 <a href="./index.html"><img src="./img/logo2.png" alt="Logo"></a>
                 <span>
                     <a href="./index.html">
@@ -29,12 +28,43 @@
                     </a>
                 </span>
             </section>
-            <section>
+            <section >
                 <nav>
                     <a href="./index.html">Home</a>
                     <a href="./index.html#catagory">Category</a>
                     <a href="./about.html">About</a>
                     <a href="./contact.html">Contact Us</a>
+                    <a  style="cursor: pointer;">
+                     <label class="donate" for="modal-1" style="cursor: pointer;">Donate</label>
+                     <input class="modal-state" id="modal-1" type="checkbox" />
+                     <div class="modal">
+                     <label class="modal__bg" for="modal-1"></label>
+                     <div id="modal" class="modal__inner">
+                         <form  id="bookDonate">
+                             <span>
+                             <label for="namew">Name of the Book: </label>
+                             <input type="text" id="namew" placeholder="Name of the Book" required>
+                             <label for="year">Year of issue: </label>
+                             <input type="number" id="year" placeholder="Year of issue" max="2021" required>
+                             <label for="aouther">Author : </label>
+                             <input type="text" id="aouther" placeholder="Author" required>
+                             <label for="desc">Description of the book</label>
+                             <textarea style="height: 50px;" id="desc" placeholder="desc of the Book" required></textarea>
+                             <label for="type">Type of the Book:</label>
+                             <select name="type" id="type">
+                                 <option value="novel">Novel</option>
+                                 <option value="science">Science</option>
+                                 <option value="history">History</option>
+                                 <option value="poems">Poems</option>
+                             </select>
+                             <label for="img">IMG URL : </label>
+                             <input type="text" id="imag" placeholder="URL IMG" required>
+                            </span>
+                             <button type="submit" id="donate">Donate </button>
+                         </form>
+                     </div>
+                    </div>
+                    </a>
                 </nav>
             </section>
         </section>
@@ -142,6 +172,7 @@
    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="./js/page.js"></script>
 </body>
 
