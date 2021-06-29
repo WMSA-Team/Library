@@ -1,5 +1,5 @@
-/* @import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'; */
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+/* @import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'; */
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,600';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
 
@@ -11,7 +11,7 @@ body {
     gap: 30px;
   }
 
-header {
+  header {
     background: url(https://careers.5ca.com/wp-content/uploads/2018/02/header-books.jpg) #22222290;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,185 +88,12 @@ main section span b {
 }
 
 
-.img{
-    padding: 5px;
-    float:right;
-    width: 750px;
-    height: 550px;
-    border-radius: 15px;
-}
-
-.w{
-  justify-content:flex-end;
-  color: beige;
-
-}
-.lib{
-    color: blanchedalmond;
-    text-align: left; padding: 20px;
-font-family: 'Pacifico', cursive;
-}
-
-main {
-    display: grid;
-    gap: 50px;
-    width: 1000px;
-}
-main section {
-    display: flex;
-    gap: 15px;
-    justify-content: space-around;
-    width: 1000px;
-}
-
-main section img {
-    height: 400px;
-    width: 500px;
-    border-radius: 15px;
-}
 
 
-.about{
-    text-align: left;
-    font-size: xx-large;
-    font-family: cursive;
-    font-weight: bold;
-    padding: 30px;
-    margin-top: 15px;
-}
-
-
-
-  .o{
-      text-align:left;
-      color:black;
-      font-size: large;
-      padding: 40px;
-      font-family: 'Yellowtail', cursive;   
-  }
-  .library{
-      text-align:left;
-      color:darkgoldenrod;
-      padding: 10px;
-      font-size:large;
-     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     font-weight: bold;
-     text-indent: 30px;
-    
-  }
-
-footer {
-    background-color: black;
-    /* margin-top:  350px; */
-    height: 200px;
-    width: 100%;
-   
-  
-}
-
-footer {
-    /* background-image: url('../img/aaaa.png'); */
-    background-color: black;
-    width: 100%;
-    background-attachment: fixed;
-    height: 200px;
-    display: grid;
-    place-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-weight: 700;
-    padding:40px 0;
-    text-align: center;
-}
-
-footer img {
-    width: 70px;
-    
-}
-
-#footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 25px;
-    font-family: 'Bad Script', cursive;
-    text-align: center;
-  }
-
-
- .card {
-     /* border: 2px solid green; */
-     width: 300px;
-     height: 300px;
-     display: grid;
-     /* gap: 150px; */
-     grid-template-columns: auto;
-     background-color: white;
-     color: black;
-     border-radius: 15px;
- }
-
- #cards {
-     display: flex;
-     width: 1000px;
-     /* justify-content: flex-start; */
-     flex-wrap: wrap;
- }
-
-
- .card img {
-     width: 140px;
-     height: 140px;
-     /* border: 5px solid red; */
-     border-radius: 50%;
-     /* border-radius: 0px; */
-     margin-top: 10px;
- }
-
- .main {
-     width: 300px;
-     display: grid;
-     gap:10px;
-     place-items: center;
-     height: 200px;
- }
-
- .cardFooter {
-     display: flex;
-     height: 50px;
-     width: 300px;
-     flex-direction: column;
-     height: 100%;
-     justify-content: flex-end;
-     gap: 5px;
-     margin-left: 8px;
- }
-
- .cardFooter p {
-     font-size: 14px;
-     width: 300px;
-     text-indent: 0;
-     text-align: left;
-     line-height: initial;
- }
-
- .main p {
-    text-indent: 0;
-    text-align: left;
-    line-height: initial;
- }
-
-
- .main h3 {
-     font-weight: 600;
- }
-
- .main p {
-     font-weight: 200;
-     color: gray;
- }
-
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Raleway:100,600';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
 
 h1,
 h2,
@@ -298,51 +125,12 @@ a:hover{
 }
 
 .team{
-  /* margin:40px; */
-}
-
-header h2 {
-    color: white;
-}
-
-.col-md-12 {
-    font-size: 40px;
-    text-align: center;
-    width: 100%;
-}
-
-.col-md-4{
-    width: 280px;
-    height: 300px;
-    margin: 20px;
-    padding: 30px 0;
-}
-
-.row {
-    display: flex;
-    width: 1000px;
-    height: 100%;
-    justify-content: space-around;
-    /* height: 1200px; */
-    flex-wrap: wrap;
-}
-
-.container {
-    height: 100%;
-    width: 100%;
-    margin: 30px;
+  margin:40px;
 }
 
 .team-member {
-  /* margin: 15px 0; */
-  /* padding: 0; */
-  width: 300px;
-  height: 300px;
-}
-
-figure {
-    width: 100%;
-    height: 100%;
+  margin: 15px 0;
+  padding: 0;
 }
 
 .team-member figure {
@@ -352,15 +140,12 @@ figure {
   margin: 0;
 }
 
-
 .team-member figure img {
-    height: inherit;
-    width: 100%;
+  min-width: 100%;
 }
 
 .team-member figcaption p {
   font-size: 16px;
-  width: 200px;
 }
 
 .team-member figcaption ul {
@@ -379,16 +164,16 @@ figure {
 
 .team-member figcaption ul li {
   display: inline-block;
-  padding: 15px;
+  padding: 10px;
 }
 
 .team-member h4 {
-  /* margin: 10px 0 0; */
+  margin: 10px 0 0;
   padding: 0;
 }
 
 .team-member figcaption {
-  /* padding: 50px; */
+  padding: 50px;
   color: transparent;
   background-color: transparent;
   position: absolute;
@@ -403,25 +188,15 @@ figure {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
-
-#team {
-    width: 1000px;
-    height: fit-content;
 }
 
 .team-member figure:hover figcaption {
-    text-align: center;
-    height: 100%;
-    width: 100%;
   visibility: visible;
   color: #fff;
   background: rgba(230, 78, 62, 0.9);
   /* Primary color, can be changed via colors.css */
   
+  height: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
