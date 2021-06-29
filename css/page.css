@@ -34,7 +34,11 @@ header nav a {
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    position: sticky;
+    /* position: sticky; */
+    /* position: sticky;
+    top:0; */
+    /* z-index: 1; */
+    /* bottom: 0; */
 }
 
 h1 {
@@ -460,7 +464,7 @@ footer img {
     font-family: 'Montserrat', sans-serif;
     /* background: #ECF0F1; */
   }
-  
+
   button {
     position: relative;
     /* width: 250px; height: 60px; */
@@ -477,7 +481,7 @@ footer img {
     color: #fff;
     width: 100%;
   }
-  
+
   button:after {
     position: absolute;
     top: 90%; left: 0;
@@ -487,16 +491,160 @@ footer img {
     z-index: -2;
     transition: transform .3s;
   }
-  
+
   button:hover::after {
     transform: translateY(-80%);
     transition: transform .3s;
   }
-  
+
   .action {
       display: grid;
       place-items: center;
       margin-bottom: 20px;
   }
-  
-  
+
+
+
+
+/* [Object] Modal
+ * =============================== */
+ .modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0,0,0, .9);
+  transition: opacity .25s ease;
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal-state {
+  display: none;
+}
+
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-state:checked + .modal .modal__inner {
+  top: 0;
+}
+
+.modal__inner {
+  transition: top .25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  height: 50%;
+  color: black;
+  display: grid;
+  width: 380px;
+  border-radius: 15px;
+  cursor: default;
+  display: grid;
+    place-items: center;
+  /* grid-template-columns: auto; */
+  /* place-items: center; */
+  /* width: fit-content; */
+}
+
+.modal__inner form {
+  gap: 20px;
+    display: grid;
+    place-items: center;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.modal__inner span {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.modal__inner button {
+  width: 50%;
+}
+
+.modal__inner input {
+  width: 150px;
+}
+
+.modal__inner textarea {
+  width: 150px;
+}
+
+.modal__inner label {
+  text-align: left;
+  /* width: 190px; */
+  /* margin: 0; */
+  width: fit-content;
+}
+
+
+
+
+.modal__close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+  background: #aaa;
+}
+
+.modal__close:before {
+  transform: rotate(-45deg);
+}
+
+.sticky {
+	
+  background-color: #22222215;
+	position: -webkit-sticky;
+	position: fixed;
+	top: 0;
+}
