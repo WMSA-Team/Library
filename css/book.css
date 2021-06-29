@@ -51,7 +51,7 @@ header nav a {
 
 main {
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
     width: 1000px;
     gap: 25px;
 
@@ -61,8 +61,9 @@ main {
 .poster-photo{
     width: 400px;
     height: 600px;
-    
-    
+
+    /* padding-left: 130px; */
+
     
 }
 
@@ -70,6 +71,7 @@ main {
 .left-div img {
     height: 450px;
     width: 350px;
+
 }
 
 .right-div{
@@ -78,9 +80,9 @@ main {
      margin-left: 10px;
     margin-top: 20px; 
     
-     width:400px
+     width:400px;
      
-
+     place-items: center;
 }
 
 .bookInfo{
@@ -206,4 +208,8 @@ header nav a {
     align-items: center;
     height: 100px;
     position: sticky;
+}
+#mainDesc{
+    line-height: 1.7;
+    text-align: justify;
 }
