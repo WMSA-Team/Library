@@ -81,6 +81,7 @@ button {
 main {
     display: grid;
     place-items: center;
+    gap: 50px;
 }
 
 #events {
@@ -468,7 +469,7 @@ footer img {
     /* background: #ECF0F1; */
   }
 
-  button {
+  main button {
     position: relative;
     /* width: 250px; height: 60px; */
     background: #E74C3C;
@@ -485,7 +486,7 @@ footer img {
     width: 100%;
   }
 
-  button:after {
+  main button:after {
     position: absolute;
     top: 90%; left: 0;
     width: 100%; height: 100%;
@@ -495,7 +496,7 @@ footer img {
     transition: transform .3s;
   }
 
-  button:hover::after {
+ main button:hover::after {
     transform: translateY(-80%);
     transition: transform .3s;
   }

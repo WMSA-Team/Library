@@ -260,10 +260,13 @@ function donating (e) {
     let newBook  = new Book(e.target.namew.value,e.target.desc.value,e.target.imag.value,e.target.type.value)
     newBook.year = e.target.year.value
     localStorage.setItem('Book.arr', JSON.stringify(Book.arr));
-    let p = document.createElement('p')
-    p.innerText = 'Thanks for your Donating ❤️ .'
-    bookDonate.reset()
-    modal.appendChild(p); 
+    Swal.fire(
+      'Good job!',
+      'Thanks for your Donating ❤️ .',
+      'success'
+    )
+
+    bookDonate.reset() 
   // }
 
 }
@@ -361,3 +364,11 @@ function start () {
 }
 start()
 render(Book.arr);
+
+
+
+
+// Swal.fire ({
+//   text: 
+
+// })
