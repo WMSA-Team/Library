@@ -575,6 +575,7 @@ footer img {
   /* grid-template-columns: auto; */
   /* place-items: center; */
   /* width: fit-content; */
+  text-align: left;
 }
 
 .modal__inner form {
@@ -590,9 +591,10 @@ footer img {
 .modal__inner span {
   display: grid;
   grid-template-columns: auto auto;
-  place-items: center;
+  /* place-items: center; */
   height: 100%;
   gap: 20px;
+  text-align: left;
 }
 
 .modal__inner button {
