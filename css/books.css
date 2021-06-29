@@ -82,6 +82,7 @@ main {
     display: flex;
     margin-top: 100px;
 
+
 }
 
 h1{
@@ -153,19 +154,22 @@ h1{
   }
   div.side.back section {
     display: grid;
-    gap: 70px;
+    gap: 50px;
     text-align: left;
+    margin-left: 5px;
   }
 
 
 
   div.side.back section h1 {
       font-weight: bold;
+      text-align:center;
+      padding: 15px;
   }
 
   div.side.back section p {
       overflow: auto;
-      height: 230px;
+      height: 180px;
   }
 
 div.side img {

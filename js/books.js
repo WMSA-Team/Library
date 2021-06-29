@@ -16,7 +16,7 @@ function render (ar) {
             let h1 = document.createElement('h1')
             h1.innerText = ar[i].name;
             let p = document.createElement('p')
-            p.innerText = `${ar[i].description.slice(0,99)}.........`;
+            p.innerText = `${ar[i].description.slice(0,99)}..`;
             let sideBack = document.createElement('div')
             sideBack.className = 'side back'
             let action = document.createElement('section')

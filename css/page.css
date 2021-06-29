@@ -205,6 +205,7 @@ nav h4 {
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-top: 2px;
     font-size: large;
+    padding-top: 5px;
   }
   
   #pra {
@@ -230,6 +231,8 @@ a {
 
   div.side.back section p {
       overflow: auto;
+      text-align: left;
+      margin-left: 5px;
       /* height: 70px; */
   }
 
